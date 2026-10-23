@@ -2,15 +2,15 @@
 
 Catálogo de planos Claro para enviar aos clientes pelo WhatsApp.
 
-- Evelyn Hartmann: https://planosempresas.github.io/
-- Everton Maia: https://planosempresas.github.io/everton/
+- Evelyn Hartmann: https://claroempresa.github.io/planosempresas.github.io/
+- Everton Maia: https://claroempresa.github.io/planosempresas.github.io/everton/
 
 ## Links diretos (funcionam em qualquer consultor, ex.: `.../everton/#internet`)
-- Portabilidade: https://planosempresas.github.io/#portabilidade
-- Transferência de CPF para CNPJ: https://planosempresas.github.io/#transferencia
-- Linha nova (CNPJ): https://planosempresas.github.io/#linha-nova
-- Internet Wi-Fi: https://planosempresas.github.io/#internet
-- Combo internet + Claro Pós: https://planosempresas.github.io/#combo
+- Portabilidade: https://claroempresa.github.io/planosempresas.github.io/#portabilidade
+- Transferência de CPF para CNPJ: https://claroempresa.github.io/planosempresas.github.io/#transferencia
+- Linha nova (CNPJ): https://claroempresa.github.io/planosempresas.github.io/#linha-nova
+- Internet Wi-Fi: https://claroempresa.github.io/planosempresas.github.io/#internet
+- Combo internet + Claro Pós: https://claroempresa.github.io/planosempresas.github.io/#combo
 
 ## Como alterar
 - O site da Evelyn é o `index.html` e serve de modelo para os demais consultores.

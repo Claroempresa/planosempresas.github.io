@@ -13,7 +13,7 @@ coloque a foto (quadrada, rosto centralizado) em <pasta>/foto.jpg.
 from pathlib import Path
 
 RAIZ = Path(__file__).parent
-SITE = "https://planosempresas.github.io/"
+SITE = "https://claroempresa.github.io/planosempresas.github.io/"
 
 CONSULTORES = [
     {
