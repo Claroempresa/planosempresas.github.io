@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Planos Claro para você e sua empresa | Evelyn Hartmann · Revenda Autorizada Claro</title>
+  <meta name="description" content="Portabilidade Claro a partir de R$ 29,99, planos para CNPJ (transferência de CPF para CNPJ ou linha nova) a partir de R$ 39,99 por linha e internet Wi-Fi Claro fibra a partir de R$ 59,90. Análise gratuita da sua conta com Evelyn Hartmann, Revenda Autorizada Claro.">
+  <meta name="theme-color" content="#DA291C">
+
+  <!-- Prévia do link no WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://planosempresas.github.io/">
+  <meta property="og:title" content="Planos Claro para você e sua empresa | Análise gratuita da sua conta">
+  <meta property="og:description" content="Portabilidade a partir de R$ 29,99. CPF para CNPJ ou linha nova a partir de R$ 39,99. Internet Wi-Fi a partir de R$ 59,90. Revenda Autorizada Claro.">
+  <meta property="og:image" content="https://planosempresas.github.io/capa.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <link rel="icon" href="foto.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================================
+       CORES — altere aqui para mudar o site inteiro
+       ========================================================= */
+    :root {
+      --vermelho:        #DA291C;  /* vermelho Claro */
+      --vermelho-escuro: #B01D12;
+      --vermelho-suave:  #FDECEA;
+      --texto:           #1F1F1F;
+      --suave:           #5F6368;
+      --fundo:           #F4F4F5;
+      --branco:          #FFFFFF;
+      --linha:           #E3E3E6;
+      --whats:           #1FA855;  /* botões que abrem o WhatsApp */
+      --whats-escuro:    #178A45;
+
+      --fonte: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--fundo);
+      color: var(--texto);
+      font-family: var(--fonte);
+      font-size: 15px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    [hidden] { display: none !important; }
+    h1, h2, h3 { margin: 0; line-height: 1.2; letter-spacing: -.01em; }
+
+    .conteudo { max-width: 640px; margin: 0 auto; padding: 0 16px; }
+
+    /* ---------- Barra do topo ---------- */
+    .barra {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--vermelho);
+      box-shadow: 0 1px 0 rgba(0, 0, 0, .08);
+    }
+    .barra .conteudo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 60px;
+    }
+    .barra__selo { display: block; width: 150px; height: auto; }
+    .barra__whats {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--branco);
+      color: var(--vermelho);
+      font-weight: 700;
+      font-size: 13px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .barra__whats svg { width: 16px; height: 16px; }
+
+    /* ---------- Destaque principal ---------- */
+    .destaque {
+      background: linear-gradient(160deg, var(--vermelho) 0%, var(--vermelho-escuro) 100%);
+      color: var(--branco);
+      padding: 34px 0 40px;
+    }
+    .destaque h1 { font-size: clamp(28px, 7.6vw, 40px); font-weight: 800; }
+    .destaque__sub { margin: 12px 0 0; font-size: 16px; opacity: .95; }
+    .destaque__precos { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .destaque__precos li {
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, .14);
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .destaque__precos span { display: block; margin-top: 4px; font-weight: 400; font-size: 12px; }
+    .destaque__precos b { display: block; font-size: 22px; font-weight: 800; }
+    .destaque__precos .wifi { grid-column: 1 / -1; display: grid; grid-template-columns: 34px 1fr; gap: 10px; align-items: center; }
+    .destaque__precos .wifi svg { width: 34px; height: 34px; }
+    .destaque__acoes { display: grid; gap: 10px; margin-top: 22px; }
+    .garantias { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 8px; font-size: 14px; font-weight: 500; }
+    .garantias li { display: flex; gap: 10px; align-items: center; }
+    .garantias svg { width: 18px; height: 18px; flex: none; }
+
+    /* ---------- Botões ---------- */
+    .botao {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      min-height: 52px;
+      padding: 12px 18px;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      font-family: var(--fonte);
+      font-weight: 700;
+      font-size: 15.5px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      transition: background-color .2s ease, border-color .2s ease;
+    }
+    .botao svg { width: 20px; height: 20px; flex: none; }
+    .botao--whats { background: var(--whats); color: var(--branco); }
+    .botao--whats:hover { background: var(--whats-escuro); }
+    .botao--branco { background: var(--branco); color: var(--vermelho); }
+    .botao--contorno { border-color: rgba(255, 255, 255, .8); color: var(--branco); background: transparent; }
+    .botao--contorno:hover { background: rgba(255, 255, 255, .12); }
+    .botao:focus-visible, .escolha:focus-visible, .opcao:focus-visible, .voltar:focus-visible, summary:focus-visible, .barra__whats:focus-visible {
+      outline: 3px solid #1A73E8;
+      outline-offset: 2px;
+    }
+
+    /* ---------- Consultora ---------- */
+    .consultora {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 14px;
+      align-items: center;
+      margin-top: -18px;
+      padding: 16px;
+      background: var(--branco);
+      border: 1px solid var(--linha);
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, .06);
+      position: relative;
+    }
+    .consultora img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; object-position: top; }
+    .consultora p { margin: 0; font-size: 13px; color: var(--suave); line-height: 1.4; }
+    .consultora strong { display: block; font-size: 16px; color: var(--texto); }
+    .consultora a { color: var(--texto); font-weight: 600; text-decoration: none; }
+
+    /* ---------- Seções ---------- */
+    .secao { margin-top: 40px; scroll-margin-top: 76px; }
+    .secao__rotulo { margin: 0 0 6px; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--vermelho); }
+    .secao h2 { font-size: 24px; font-weight: 800; }
+    .secao__intro { margin: 8px 0 0; color: var(--suave); font-size: 14.5px; }
+
+    /* ---------- Escolha do caminho ---------- */
+    .escolhas { display: grid; gap: 12px; margin-top: 18px; }
+    .escolha {
+      display: grid;
+      grid-template-columns: 48px 1fr 20px;
+      align-items: center;
+      gap: 14px;
+      padding: 16px;
+      background: var(--branco);
+      border: 2px solid var(--linha);
+      border-radius: 14px;
+      color: var(--texto);
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .escolha:hover { border-color: #C9C9CE; }
+    .escolha[aria-current="true"] { border-color: var(--vermelho); background: var(--vermelho-suave); }
+    .escolha__icone { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 12px; background: var(--vermelho-suave); color: var(--vermelho); }
+    .escolha__icone svg { width: 24px; height: 24px; }
+    .escolha strong { display: block; font-size: 16px; line-height: 1.3; }
+    .escolha small { display: block; margin-top: 2px; color: var(--suave); font-size: 13px; line-height: 1.4; }
+    .escolha__seta { color: var(--vermelho); font-size: 22px; font-weight: 700; }
+
+    /* ---------- Catálogos ---------- */
+    .passos { list-style: none; margin: 18px 0; padding: 0; display: grid; gap: 8px; counter-reset: passo; }
+    .passos li {
+      counter-increment: passo;
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 10px;
+      align-items: start;
+      padding: 12px;
+      background: var(--branco);
+      border: 1px solid var(--linha);
+      border-radius: 12px;
+      font-size: 14px;
+    }
+    .passos li::before {
+      content: counter(passo);
+      width: 28px; height: 28px;
+      display: grid; place-items: center;
+      border-radius: 50%;
+      background: var(--vermelho);
+      color: var(--branco);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .opcoes { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 18px; }
+    .opcao {
+      padding: 11px 8px;
+      border: 2px solid var(--linha);
+      border-radius: 10px;
+      background: var(--branco);
+      color: var(--texto);
+      font-family: var(--fonte);
+      font-weight: 600;
+      font-size: 13.5px;
+      line-height: 1.3;
+      cursor: pointer;
+    }
+    .opcao[aria-pressed="true"] { border-color: var(--vermelho); background: var(--vermelho-suave); color: var(--vermelho-escuro); }
+
+    .planos { display: grid; gap: 12px; }
+    .plano {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2px 12px;
+      align-items: center;
+      padding: 16px;
+      background: var(--branco);
+      border: 1px solid var(--linha);
+      border-radius: 14px;
+    }
+    .plano__gb { margin: 0; font-size: 28px; font-weight: 800; line-height: 1.1; }
+    .plano__det { margin: 0; grid-column: 1; font-size: 13px; color: var(--suave); }
+    .plano__preco { grid-column: 2; grid-row: 1 / span 2; margin: 0; text-align: right; line-height: 1.1; white-space: nowrap; }
+    .plano__preco b { display: block; font-size: 24px; font-weight: 800; color: var(--vermelho); }
+    .plano__preco small { font-size: 11px; color: var(--suave); }
+    .plano__extra { grid-column: 1 / -1; margin: 12px 0 0; padding-top: 12px; border-top: 1px solid var(--linha); font-size: 12.5px; color: var(--suave); }
+    .plano .botao { grid-column: 1 / -1; margin-top: 12px; min-height: 46px; font-size: 14.5px; }
+    .selo {
+      display: inline-block;
+      margin-left: 6px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--vermelho-suave);
+      color: var(--vermelho-escuro);
+      font-size: 11px;
+      font-weight: 700;
+      vertical-align: middle;
+    }
+    .plano__logos { grid-column: 1 / -1; display: flex; gap: 6px; margin: 12px 0 0; padding: 0; list-style: none; }
+    .plano__logos img { display: block; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--linha); }
+    .plano__depois { grid-column: 1 / -1; margin: 6px 0 0; font-size: 13px; color: var(--texto); }
+    .inclusos { margin: 14px 0 0; padding: 14px; border-radius: 12px; background: var(--branco); border: 1px solid var(--linha); font-size: 13.5px; }
+    .inclusos a { color: var(--vermelho); font-weight: 700; }
+    .voltar {
+      display: block;
+      margin: 16px auto 0;
+      background: none;
+      border: 0;
+      color: var(--vermelho);
+      font-family: var(--fonte);
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      cursor: pointer;
+    }
+
+    /* ---------- Combo internet + Claro Pós ---------- */
+    .combo-bloco {
+      padding: 24px 18px;
+      border-radius: 16px;
+      background: linear-gradient(160deg, #1F1F1F 0%, #4A0C07 100%);
+      color: var(--branco);
+    }
+    .combo-bloco .secao__rotulo { color: #FF8A3D; }
+    .combo-bloco h2 { color: var(--branco); }
+    .combo-bloco h2 b { color: #FF8A3D; }
+    .combo-bloco .secao__intro { color: rgba(255, 255, 255, .85); }
+    .combos { display: grid; gap: 10px; margin-top: 18px; }
+    .combo { padding: 16px; border-radius: 14px; background: var(--branco); color: var(--texto); }
+    .combo__itens { margin: 0; font-size: 17px; font-weight: 800; }
+    .combo__itens span { color: var(--vermelho); }
+    .combo__gb { margin: 4px 0 0; font-size: 13px; color: var(--suave); }
+    .combo__gb b { color: #E8590C; }
+    .combo__preco { margin: 10px 0 0; font-size: 13px; color: var(--suave); }
+    .combo__preco b { font-size: 24px; font-weight: 800; color: var(--vermelho); }
+    .combo__depois { margin: 2px 0 0; font-size: 13px; }
+    .combo .botao { margin-top: 12px; min-height: 46px; font-size: 14.5px; }
+    .combo-bloco__obs { margin: 14px 0 0; font-size: 12px; color: rgba(255, 255, 255, .75); }
+
+    /* ---------- Análise gratuita ---------- */
+    .analise {
+      padding: 22px 18px;
+      background: var(--branco);
+      border: 2px solid var(--vermelho);
+      border-radius: 16px;
+    }
+    .analise .passos li { background: var(--fundo); border: 0; }
+
+    /* ---------- Vantagens ---------- */
+    .vantagens { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; }
+    .vantagens li {
+      padding: 14px;
+      background: var(--branco);
+      border: 1px solid var(--linha);
+      border-radius: 12px;
+      font-size: 12.5px;
+      line-height: 1.4;
+      color: var(--suave);
+    }
+    .vantagens strong { display: block; margin-bottom: 2px; font-size: 14px; color: var(--texto); }
+    .vantagens__logo { display: flex; align-items: center; height: 46px; margin-bottom: 10px; }
+    .vantagens__logo img { width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--linha); }
+    .vantagens__logo--claro { padding: 0 12px; border-radius: 10px; background: var(--vermelho); }
+    .vantagens__logo--claro img { width: auto; max-width: 100%; height: 17px; border: 0; border-radius: 0; }
+    .vantagens__obs { margin: 10px 0 0; font-size: 12px; color: var(--suave); }
+
+    /* ---------- Perguntas frequentes ---------- */
+    .perguntas { margin-top: 18px; display: grid; gap: 8px; }
+    .perguntas details { background: var(--branco); border: 1px solid var(--linha); border-radius: 12px; }
+    .perguntas summary {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      font-weight: 600;
+      font-size: 14.5px;
+      cursor: pointer;
+    }
+    .perguntas summary::-webkit-details-marker { display: none; }
+    .perguntas summary::after { content: "+"; color: var(--vermelho); font-size: 20px; font-weight: 700; line-height: 1; }
+    .perguntas details[open] summary::after { content: "–"; }
+    .perguntas details p { margin: 0; padding: 0 16px 14px; color: var(--suave); font-size: 14px; }
+
+    /* ---------- Rodapé ---------- */
+    .chamada { margin-top: 44px; padding: 28px 0 32px; background: var(--vermelho); color: var(--branco); text-align: center; }
+    .chamada h2 { font-size: 24px; font-weight: 800; }
+    .chamada p { margin: 8px 0 18px; opacity: .95; }
+    .rodape { padding: 24px 0 36px; text-align: center; font-size: 12.5px; color: var(--suave); }
+    .rodape p { margin: 4px 0; }
+    .rodape__selo { display: inline-block; margin-bottom: 12px; padding: 10px 14px; background: var(--vermelho); border-radius: 8px; }
+    .rodape__selo img { display: block; width: 130px; height: auto; }
+
+    @media (min-width: 700px) {
+      .destaque { padding: 56px 0 64px; }
+      .destaque__acoes { grid-template-columns: 1fr 1fr; }
+      .vantagens { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ícones reaproveitados -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-whats" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#fff"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#DA291C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-troca" viewBox="0 0 24 24"><path d="M4 8h13l-3-3M20 16H7l3 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.5 16a5 5 0 0 1 7 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="19.5" r="1.6" fill="currentColor"/></symbol>
+    <symbol id="i-empresa" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4v18M19 21V11l-7-3M8 10h1M8 14h1M8 18h1M15 13h1M15 17h1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <!-- ===== BARRA DO TOPO ===== -->
+  <header class="barra">
+    <div class="conteudo">
+      <img class="barra__selo" src="claro-revenda.png" alt="Claro | Revenda Autorizada" width="1002" height="208">
+      <a class="barra__whats" data-msg="Olá, Evelyn! Vim pelo site e quero falar sobre os planos Claro." href="#" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="#i-whats"/></svg>WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== DESTAQUE ===== -->
+    <section class="destaque">
+      <div class="conteudo">
+        <h1>Planos Claro para você e sua empresa</h1>
+        <p class="destaque__sub">Portabilidade, transferência de CPF para CNPJ, linha nova e internet Wi-Fi, com atendimento direto pelo WhatsApp.</p>
+        <ul class="destaque__precos">
+          <li>Portabilidade<span>a partir de <b>R$ 29,99</b>/mês por linha</span></li>
+          <li>CPF para CNPJ ou linha nova<span>a partir de <b>R$ 39,99</b>/mês por linha</span></li>
+          <li class="wifi"><svg aria-hidden="true"><use href="#i-wifi"/></svg><div>Internet Wi-Fi para empresa<span>a partir de <b>R$ 59,90</b>/mês nos 3 primeiros meses</span></div></li>
+        </ul>
+
+        <div class="destaque__acoes">
+          <a class="botao botao--branco" data-msg="Olá, Evelyn! Quero a análise gratuita da minha conta. Vou te mandar a foto da minha fatura." href="#" target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#i-whats"/></svg>Quero análise gratuita
+          </a>
+          <a class="botao botao--contorno" href="#escolha">Ver planos e preços</a>
+        </div>
+
+        <ul class="garantias">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Revenda Autorizada Claro</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Análise da sua conta grátis e sem compromisso</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Você continua com o mesmo número</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="conteudo">
+
+      <!-- ===== CONSULTORA ===== -->
+      <div class="consultora">
+        <img src="retrato.jpg" alt="Foto de Evelyn Hartmann" width="64" height="64">
+        <p>Sua consultora<strong>Evelyn Hartmann</strong>Revenda Autorizada Claro · WhatsApp <a data-msg="Olá, Evelyn! Vim pelo site e quero falar sobre os planos Claro." href="#" target="_blank" rel="noopener">(42) 99824-2620</a></p>
+      </div>
+
+      <!-- =====================================================
+           ESCOLHA DO CAMINHO
+           Links diretos (opcionais) para o disparo:
+             planosempresas.github.io/#portabilidade
+             planosempresas.github.io/#transferencia
+             planosempresas.github.io/#linha-nova
+             planosempresas.github.io/#internet
+           ===================================================== -->
+      <section class="secao" id="escolha">
+        <p class="secao__rotulo">Planos e preços</p>
+        <h2>O que você precisa?</h2>
+        <nav class="escolhas" aria-label="Escolha o tipo de atendimento">
+          <a class="escolha" href="#portabilidade" data-caminho="portabilidade">
+            <span class="escolha__icone" aria-hidden="true"><svg><use href="#i-troca"/></svg></span>
+            <span><strong>Portabilidade</strong><small>Traga seu número de outra operadora para a Claro</small></span>
+            <span class="escolha__seta" aria-hidden="true">›</span>
+          </a>
+          <a class="escolha" href="#transferencia" data-caminho="empresa">
+            <span class="escolha__icone" aria-hidden="true"><svg><use href="#i-empresa"/></svg></span>
+            <span><strong>Transferência de CPF para CNPJ ou linha nova</strong><small>Planos Claro Pós exclusivos para empresas e MEI</small></span>
+            <span class="escolha__seta" aria-hidden="true">›</span>
+          </a>
+          <a class="escolha" href="#internet" data-caminho="internet">
+            <span class="escolha__icone" aria-hidden="true"><svg><use href="#i-wifi"/></svg></span>
+            <span><strong>Internet Wi-Fi para sua empresa</strong><small>Banda larga Claro fibra a partir de R$ 59,90</small></span>
+            <span class="escolha__seta" aria-hidden="true">›</span>
+          </a>
+        </nav>
+      </section>
+
+      <!-- =====================================================
+           CATÁLOGO 1: PORTABILIDADE
+           Planos da página 52 do Book Claro empresas (out/2026).
+           Para mudar um preço, altere o valor no plano e no
+           data-plano do botão (é a mensagem que vai pro WhatsApp).
+           ===================================================== -->
+      <section class="secao catalogo" id="catalogo-portabilidade" hidden>
+        <p class="secao__rotulo">Portabilidade</p>
+        <h2>Traga seu número para a Claro</h2>
+        <p class="secao__intro">Você continua com o mesmo número, só muda a operadora. Valores por linha, por mês.</p>
+
+        <ol class="passos">
+          <li><span>Escolha o plano e me chame no WhatsApp.</span></li>
+          <li><span>Eu faço o seu cadastro, sem você sair de casa.</span></li>
+          <li><span>Responda o SMS de confirmação da portabilidade e pronto: seu número já está na Claro.</span></li>
+        </ol>
+
+        <div class="planos">
+          <article class="plano">
+            <p class="plano__gb">6GB</p>
+            <p class="plano__det">1GB + 5GB de bônus</p>
+            <p class="plano__preco"><b>R$ 29,99</b><small>/mês por linha</small></p>
+            <p class="plano__extra">Gestor Online, McAfee, Claro banca, monitor e recados</p>
+            <a class="botao botao--whats" data-plano="Claro 6GB – R$ 29,99" href="#"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero este plano</a>
+          </article>
+          <article class="plano">
+            <p class="plano__gb">21GB</p>
+            <p class="plano__det">10GB + 11GB de bônus</p>
+            <p class="plano__preco"><b>R$ 39,99</b><small>/mês por linha</small></p>
+            <p class="plano__extra">Gestor Online, Skeelo, McAfee, Claro banca, monitor e recados</p>
+            <a class="botao botao--whats" data-plano="Claro 21GB – R$ 39,99" href="#"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero este plano</a>
+          </article>
+          <article class="plano">
+            <p class="plano__gb">25GB</p>
+            <p class="plano__det">15GB + 10GB de bônus</p>
+            <p class="plano__preco"><b>R$ 44,99</b><small>/mês por linha</small></p>
+            <p class="plano__depois">Conforme a região do seu DDD. Eu confirmo para você.</p>
+            <p class="plano__extra">Gestor Online, Skeelo, McAfee, Claro banca, monitor e recados</p>
+            <a class="botao botao--whats" data-plano="Claro 25GB – R$ 44,99 (conforme o DDD)" href="#"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero este plano</a>
+          </article>
+          <article class="plano">
+            <p class="plano__gb">60GB</p>
+            <p class="plano__det">25GB + 35GB de bônus</p>
+            <p class="plano__preco"><b>R$ 54,99</b><small>/mês por linha</small></p>
+            <p class="plano__depois">Conforme a região do seu DDD. Eu confirmo para você.</p>
+            <p class="plano__extra">Gestor Online, Skeelo, McAfee, Claro banca, monitor e recados</p>
+            <a class="botao botao--whats" data-plano="Claro 60GB – R$ 54,99 (conforme o DDD)" href="#"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero este plano</a>
+          </article>
+        </div>
+
+        <p class="inclusos"><strong>Em todos os planos:</strong> WhatsApp e Waze ilimitados, sem descontar da sua internet.</p>
+        <button class="voltar" type="button" data-voltar>Ver outras opções</button>
+      </section>
+
+      <!-- =====================================================
+           CATÁLOGO 2: TRANSFERÊNCIA CPF → CNPJ OU LINHA NOVA
+           ===================================================== -->
+      <section class="secao catalogo" id="catalogo-empresa" hidden>
+        <p class="secao__rotulo">Empresas e MEI</p>
+        <h2>Claro Pós para a sua empresa</h2>
+        <p class="secao__intro">Planos exclusivos para CNPJ e MEI. Valores por linha, por mês.</p>
+
+        <div class="opcoes" role="group" aria-label="O que você quer fazer?">
+          <button class="opcao" type="button" data-opcao="transferencia" aria-pressed="true">Transferir minha linha do CPF para o CNPJ</button>
+          <button class="opcao" type="button" data-opcao="linha-nova" aria-pressed="false">Contratar uma linha nova</button>
+        </div>
+
+        <ol class="passos" data-passos="transferencia">
+          <li><span>Escolha o plano e me chame no WhatsApp.</span></li>
+          <li><span>Eu te passo a lista de documentos e cuido da transferência para o CNPJ.</span></li>
+          <li><span>Você continua com o mesmo número, agora no plano da empresa.</span></li>
+        </ol>
+        <ol class="passos" data-passos="linha-nova" hidden>
+          <li><span>Escolha o plano e me chame no WhatsApp.</span></li>
+          <li><span>Eu faço o cadastro da linha no CNPJ da sua empresa.</span></li>
+          <li><span>Você recebe o chip e já sai usando.</span></li>
+        </ol>
+
+        <div class="planos">
+          <article class="plano">
+            <p class="plano__gb">12GB</p>
+            <p class="plano__det">10GB + 2GB de bônus</p>
+            <p class="plano__preco"><b>R$ 39,99</b><small>/mês por linha</small></p>
+            <p class="plano__extra">Gestor Online, Claro banca, Skeelo, recados, monitor e McAfee</p>
+            <a class="botao botao--whats" data-plano="Claro Pós 12GB – R$ 39,99" href="#"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero este plano</a>
+          </article>
+          <article class="plano">
+            <p class="plano__gb">40GB</p>
+            <p class="plano__det">25GB + 15GB de bônus</p>
+            <p class="plano__preco"><b>R$ 54,99</b><small>/mês por linha</small></p>
+            <p class="plano__extra">Gestor Online, Claro banca, Skeelo, recados, monitor e McAfee</p>
+            <a class="botao botao--whats" data-plano="Claro Pós 40GB – R$ 54,99" href="#"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero este plano</a>
+          </article>
+          <article class="plano">
+            <p class="plano__gb">70GB <span class="selo">✈ Passaporte</span></p>
+            <p class="plano__det">50GB + 20GB de bônus</p>
+            <p class="plano__preco"><b>R$ 74,99</b><small>/mês por linha</small></p>
+            <p class="plano__extra">Claro Passaporte Américas 5GB + Gestor Online, banca, Skeelo, recados, monitor e McAfee</p>
+            <a class="botao botao--whats" data-plano="Claro Pós 70GB – R$ 74,99" href="#"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero este plano</a>
+          </article>
+          <article class="plano">
+            <p class="plano__gb">100GB <span class="selo">✈ Passaporte</span></p>
+            <p class="plano__det">80GB + 20GB de bônus</p>
+            <p class="plano__preco"><b>R$ 89,99</b><small>/mês por linha</small></p>
+            <p class="plano__extra">Claro Passaporte Américas 5GB + Gestor Online, banca, Skeelo, recados, monitor e McAfee</p>
+            <a class="botao botao--whats" data-plano="Claro Pós 100GB – R$ 89,99" href="#"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero este plano</a>
+          </article>
+          <article class="plano">
+            <p class="plano__gb">150GB <span class="selo">✈ Passaporte</span></p>
+            <p class="plano__det">150GB</p>
+            <p class="plano__preco"><b>R$ 149,99</b><small>/mês por linha</small></p>
+            <p class="plano__extra">Claro Passaporte Américas 5GB + Cloud 1,5TB + Gestor Online, banca, Skeelo, recados, monitor e McAfee</p>
+            <a class="botao botao--whats" data-plano="Claro Pós 150GB – R$ 149,99" href="#"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero este plano</a>
+          </article>
+        </div>
+
+        <p class="inclusos"><strong>Em todos os planos:</strong> WhatsApp e Waze ilimitados, sem descontar da sua internet. <strong>Viaja a negócios?</strong> Os planos de 70GB, 100GB e 150GB já incluem internet nas Américas sem custo extra.</p>
+        <p class="inclusos"><strong>🔥 Junto com a internet Claro fibra, ganhe +50GB de Mega Bônus.</strong> <a href="#combo">Ver combos</a></p>
+        <button class="voltar" type="button" data-voltar>Ver outras opções</button>
+      </section>
+
+      <!-- =====================================================
+           CATÁLOGO 3: INTERNET WI-FI (BANDA LARGA CLARO FIBRA)
+           Valores do Book Claro empresas (out/2026), boleto,
+           grupos Grandes Mercados.
+           ===================================================== -->
+      <section class="secao catalogo" id="catalogo-internet" hidden>
+        <p class="secao__rotulo">Internet Wi-Fi</p>
+        <h2>Claro fibra para a sua empresa</h2>
+        <p class="secao__intro">Banda larga com Wi-Fi para CNPJ. Valores mensais no boleto; no débito automático + fatura digital, você ganha R$ 5 de desconto.</p>
+
+        <ol class="passos">
+          <li><span>Me chame no WhatsApp e envie o CEP da empresa.</span></li>
+          <li><span>Eu consulto a disponibilidade e o melhor plano para o seu endereço.</span></li>
+          <li><span>Instalação em até 24 horas depois do contrato gerado.</span></li>
+        </ol>
+
+        <div class="planos">
+          <article class="plano">
+            <p class="plano__gb">400 Mega</p>
+            <p class="plano__det">Wi-Fi Plus</p>
+            <p class="plano__preco"><b>R$ 79,90</b><small>/mês</small></p>
+            <ul class="plano__logos" aria-hidden="true"><li><img src="logos/wifi-plus.png" alt=""></li><li><img src="logos/mcafee.png" alt=""></li><li><img src="logos/skeelo.png" alt=""></li></ul>
+            <p class="plano__extra">Wi-Fi Plus · McAfee para 3 dispositivos · Skeelo</p>
+            <a class="botao botao--whats" data-plano="400 Mega – R$ 79,90" href="#"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero este plano</a>
+          </article>
+          <article class="plano">
+            <p class="plano__gb">600 Mega <span class="selo">Oferta</span></p>
+            <p class="plano__det">Wi-Fi Plus</p>
+            <p class="plano__preco"><b>R$ 59,90</b><small>/mês nos 3 primeiros meses</small></p>
+            <p class="plano__depois">Depois, R$ 99,90/mês, ou R$ 89,90/mês junto com Claro Pós.</p>
+            <ul class="plano__logos" aria-hidden="true"><li><img src="logos/wifi-plus.png" alt=""></li><li><img src="logos/mcafee.png" alt=""></li><li><img src="logos/skeelo.png" alt=""></li><li><img src="logos/claro-banca.png" alt=""></li></ul>
+            <p class="plano__extra">Wi-Fi Plus · McAfee para 3 dispositivos · Skeelo · Claro banca</p>
+            <a class="botao botao--whats" data-plano="600 Mega – R$ 59,90 nos 3 primeiros meses" href="#"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero este plano</a>
+          </article>
+          <article class="plano">
+            <p class="plano__gb">800 Mega</p>
+            <p class="plano__det">Wi-Fi 6</p>
+            <p class="plano__preco"><b>R$ 109,90</b><small>/mês</small></p>
+            <ul class="plano__logos" aria-hidden="true"><li><img src="logos/wifi-6.png" alt=""></li><li><img src="logos/mcafee.png" alt=""></li><li><img src="logos/skeelo.png" alt=""></li><li><img src="logos/claro-banca.png" alt=""></li></ul>
+            <p class="plano__extra">Wi-Fi 6 · McAfee para 5 dispositivos · Skeelo · Claro banca</p>
+            <a class="botao botao--whats" data-plano="800 Mega – R$ 109,90" href="#"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero este plano</a>
+          </article>
+          <article class="plano">
+            <p class="plano__gb">1 Giga</p>
+            <p class="plano__det">Wi-Fi 6</p>
+            <p class="plano__preco"><b>R$ 199,90</b><small>/mês</small></p>
+            <p class="plano__depois">Ou R$ 149,90/mês junto com Claro Pós.</p>
+            <ul class="plano__logos" aria-hidden="true"><li><img src="logos/wifi-6.png" alt=""></li><li><img src="logos/mcafee.png" alt=""></li><li><img src="logos/skeelo.png" alt=""></li><li><img src="logos/microsoft-365.png" alt=""></li></ul>
+            <p class="plano__extra">Wi-Fi 6 · McAfee para 5 dispositivos · Skeelo · Microsoft 365</p>
+            <a class="botao botao--whats" data-plano="1 Giga – R$ 199,90" href="#"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero este plano</a>
+          </article>
+        </div>
+
+        <p class="inclusos"><strong>Em todos os planos:</strong> instalação em até 24 horas, suporte técnico em até 4 horas, central exclusiva Claro empresas (10621) e equipamento sem custo. <strong>Sem taxa de adesão e instalação</strong> com fidelidade de 24 meses. Disponibilidade e valores podem variar conforme o endereço.</p>
+        <p class="inclusos"><strong>🔥 Junto com Claro Pós, ganhe +50GB de Mega Bônus.</strong> <a href="#combo">Ver combos</a></p>
+        <button class="voltar" type="button" data-voltar>Ver outras opções</button>
+      </section>
+
+      <!-- =====================================================
+           COMBO INTERNET + CLARO PÓS (+50GB MEGA BÔNUS)
+           Oferta Pré-Black Friday do Book Claro empresas (out/2026),
+           valores no boleto, grupos Grandes Mercados.
+           ===================================================== -->
+      <section class="secao combo-bloco" id="combo">
+        <p class="secao__rotulo">Oferta Pré-Black Friday</p>
+        <h2>Internet + Claro Pós: ganhe <b>+50GB</b> de Mega Bônus</h2>
+        <p class="secao__intro">Quem contrata Claro fibra e Claro Pós juntos ganha 50GB a mais para compartilhar entre as linhas da empresa pelo Gestor Online.</p>
+
+        <div class="combos">
+          <article class="combo">
+            <p class="combo__itens">600 Mega <span>+</span> Claro Pós 62GB</p>
+            <p class="combo__gb">10GB + 2GB de bônus + <b>50GB de Mega Bônus</b></p>
+            <p class="combo__preco"><b>R$ 99,89</b>/mês nos 3 primeiros meses</p>
+            <p class="combo__depois">Depois, R$ 129,89/mês</p>
+            <a class="botao botao--whats" data-combo="600 Mega + Claro Pós 62GB – R$ 99,89 nos 3 primeiros meses" href="#"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero este combo</a>
+          </article>
+          <article class="combo">
+            <p class="combo__itens">800 Mega <span>+</span> Claro Pós 62GB</p>
+            <p class="combo__gb">Wi-Fi 6 · 10GB + 2GB de bônus + <b>50GB de Mega Bônus</b></p>
+            <p class="combo__preco"><b>R$ 149,89</b>/mês</p>
+            <a class="botao botao--whats" data-combo="800 Mega + Claro Pós 62GB – R$ 149,89" href="#"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero este combo</a>
+          </article>
+          <article class="combo">
+            <p class="combo__itens">800 Mega <span>+</span> Claro Pós 90GB</p>
+            <p class="combo__gb">Wi-Fi 6 · 25GB + 15GB de bônus + <b>50GB de Mega Bônus</b></p>
+            <p class="combo__preco"><b>R$ 164,89</b>/mês</p>
+            <a class="botao botao--whats" data-combo="800 Mega + Claro Pós 90GB – R$ 164,89" href="#"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero este combo</a>
+          </article>
+        </div>
+
+        <p class="combo-bloco__obs">Valores da internet + 1 linha Claro Pós, no boleto (R$ 5 de desconto no débito automático + fatura digital). Vale quando a internet ou o Claro Pós é uma contratação nova, inclusive na transferência de CPF para CNPJ. Disponibilidade e valores podem variar conforme o endereço.</p>
+      </section>
+
+      <!-- ===== ANÁLISE GRATUITA ===== -->
+      <section class="secao analise">
+        <p class="secao__rotulo">Grátis e sem compromisso</p>
+        <h2>Análise gratuita da sua conta</h2>
+        <p class="secao__intro">Não sabe qual plano escolher? Eu comparo para você.</p>
+        <ol class="passos">
+          <li><span>Me envie a foto da sua fatura atual pelo WhatsApp.</span></li>
+          <li><span>Eu comparo com os planos Claro e te mostro quanto você pode economizar.</span></li>
+          <li><span>Você decide. Se gostar, eu cuido de toda a contratação.</span></li>
+        </ol>
+        <a class="botao botao--whats" data-msg="Olá, Evelyn! Quero a análise gratuita da minha conta. Vou te mandar a foto da minha fatura." href="#" target="_blank" rel="noopener">
+          <svg aria-hidden="true"><use href="#i-whats"/></svg>Enviar minha fatura
+        </a>
+      </section>
+
+      <!-- ===== VANTAGENS CLARO ===== -->
+      <section class="secao">
+        <p class="secao__rotulo">Vantagens Claro</p>
+        <h2>Benefícios inclusos nos planos</h2>
+        <ul class="vantagens">
+          <li><span class="vantagens__logo"><img src="logos/whatsapp.png" alt="WhatsApp" width="46" height="46"></span><strong>WhatsApp ilimitado</strong>Sem descontar da sua internet</li>
+          <li><span class="vantagens__logo"><img src="logos/waze.png" alt="Waze" width="46" height="46"></span><strong>Waze ilimitado</strong>Sem descontar da sua internet</li>
+          <li><span class="vantagens__logo"><img src="logos/mcafee.png" alt="McAfee" width="46" height="46"></span><strong>Proteção Digital McAfee</strong>Antivírus e VPN para os seus aparelhos</li>
+          <li><span class="vantagens__logo"><img src="logos/skeelo.png" alt="Skeelo" width="46" height="46"></span><strong>Skeelo</strong>Audiobooks dos livros mais vendidos</li>
+          <li><span class="vantagens__logo"><img src="logos/claro-banca.png" alt="Claro banca" width="46" height="46"></span><strong>Claro banca</strong>Revistas e jornais digitais</li>
+          <li><span class="vantagens__logo"><img src="logos/wellhub.png" alt="Wellhub" width="46" height="46"></span><strong>Até 40% off no Wellhub</strong>O antigo Gympass, pelo Claro clube</li>
+          <li><span class="vantagens__logo vantagens__logo--claro"><img src="logos/claro-passaporte.png" alt="Claro passaporte" width="449" height="60"></span><strong>Claro passaporte</strong>5GB nas Américas nos planos de 70GB, 100GB e 150GB</li>
+          <li><span class="vantagens__logo vantagens__logo--claro"><img src="logos/gestor-online.png" alt="Gestor Online" width="371" height="57"></span><strong>Gestor Online</strong>Gestão das linhas da empresa</li>
+          <li><span class="vantagens__logo vantagens__logo--claro"><img src="logos/claro-recados.png" alt="Claro recados" width="364" height="59"></span><strong>Claro recados</strong>Gestão de recados e chamadas</li>
+          <li><span class="vantagens__logo vantagens__logo--claro"><img src="logos/claro-monitor.png" alt="Claro monitor" width="357" height="58"></span><strong>Claro monitor</strong>Gestão e segurança dos aparelhos da empresa</li>
+        </ul>
+        <p class="vantagens__obs">Os benefícios variam conforme o plano. Veja o que vem em cada um na lista de planos.</p>
+      </section>
+
+      <!-- ===== PERGUNTAS FREQUENTES ===== -->
+      <section class="secao">
+        <p class="secao__rotulo">Dúvidas</p>
+        <h2>Perguntas frequentes</h2>
+        <div class="perguntas">
+          <details>
+            <summary>Vou perder meu número na portabilidade?</summary>
+            <p>Não. Na portabilidade você continua com o mesmo número, só muda a operadora para a Claro.</p>
+          </details>
+          <details>
+            <summary>Como funciona a análise gratuita?</summary>
+            <p>Você me envia a foto da sua fatura atual pelo WhatsApp, eu comparo com os planos Claro e te mostro quanto pode economizar. Não tem custo nem compromisso.</p>
+          </details>
+          <details>
+            <summary>Posso passar minha linha do CPF para o CNPJ?</summary>
+            <p>Pode. Eu te passo a lista de documentos e acompanho a transferência. Você continua com o mesmo número, agora no plano da empresa.</p>
+          </details>
+          <details>
+            <summary>Sou MEI. Posso contratar os planos para empresas?</summary>
+            <p>Sim. O MEI tem CNPJ e pode contratar os planos Claro Pós para empresas, sujeito à análise de crédito.</p>
+          </details>
+          <details>
+            <summary>Os planos têm fidelidade?</summary>
+            <p>Sim, a fidelidade é de 24 meses. E isso é uma vantagem para você: garante que o valor do seu plano fique o mesmo, sem aumentar. Nas ofertas com desconto nos primeiros meses, o valor promocional vale pelo período indicado no plano.</p>
+          </details>
+          <details>
+            <summary>A internet Wi-Fi está disponível no meu endereço?</summary>
+            <p>Depende da cobertura da Claro na sua região. Me mande o CEP da empresa pelo WhatsApp que eu consulto para você.</p>
+          </details>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== CHAMADA FINAL ===== -->
+    <section class="chamada">
+      <div class="conteudo">
+        <h2>Pronto para economizar?</h2>
+        <p>Fale comigo e receba sua análise gratuita.</p>
+        <a class="botao botao--branco" data-msg="Olá, Evelyn! Quero ajuda para escolher o melhor plano Claro." href="#" target="_blank" rel="noopener">
+          <svg aria-hidden="true"><use href="#i-whats"/></svg>Falar no WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="conteudo">
+      <span class="rodape__selo"><img src="claro-revenda.png" alt="Claro | Revenda Autorizada" width="1002" height="208"></span>
+      <p><b>Evelyn Hartmann</b> · Consultora · Revenda Autorizada Claro</p>
+      <p>WhatsApp (42) 99824-2620</p>
+      <p>Ofertas para novas contratações, sujeitas a análise de crédito e disponibilidade.</p>
+    </div>
+  </footer>
+
+  <script>
+    /* =========================================================
+       SEU WHATSAPP — 55 + DDD + número, só números.
+       ========================================================= */
+    var WHATSAPP = "5542998242620";
+
+    function linkWhats(msg) {
+      return "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg);
+    }
+
+    // Botões com mensagem fixa
+    document.querySelectorAll("[data-msg]").forEach(function (a) {
+      a.href = linkWhats(a.dataset.msg);
+    });
+
+    // Opção escolhida no catálogo de empresas (transferência ou linha nova)
+    var opcaoEmpresa = "transferencia";
+
+    // Botões "Quero este plano": a mensagem diz o plano e o tipo de atendimento
+    function atualizarPlanos() {
+      document.querySelectorAll("#catalogo-portabilidade [data-plano]").forEach(function (a) {
+        a.href = linkWhats("Olá, Evelyn! Quero fazer portabilidade para o plano " + a.dataset.plano + ".");
+      });
+      document.querySelectorAll("[data-combo]").forEach(function (a) {
+        a.href = linkWhats("Olá, Evelyn! Quero o combo internet " + a.dataset.combo + ". O CEP da empresa é: ");
+        a.target = "_blank";
+        a.rel = "noopener";
+      });
+      document.querySelectorAll("#catalogo-internet [data-plano]").forEach(function (a) {
+        a.href = linkWhats("Olá, Evelyn! Quero a internet Wi-Fi Claro fibra, plano " + a.dataset.plano + ". O CEP da empresa é: ");
+      });
+      document.querySelectorAll("#catalogo-empresa [data-plano]").forEach(function (a) {
+        var tipo = opcaoEmpresa === "linha-nova"
+          ? "contratar uma linha nova no CNPJ"
+          : "transferir minha linha do CPF para o CNPJ";
+        a.href = linkWhats("Olá, Evelyn! Quero " + tipo + " no plano " + a.dataset.plano + ".");
+      });
+    }
+    document.querySelectorAll("[data-plano]").forEach(function (a) {
+      a.target = "_blank";
+      a.rel = "noopener";
+    });
+
+    function escolherOpcao(opcao) {
+      opcaoEmpresa = opcao;
+      document.querySelectorAll("[data-opcao]").forEach(function (b) {
+        b.setAttribute("aria-pressed", b.dataset.opcao === opcao);
+      });
+      document.querySelectorAll("[data-passos]").forEach(function (ol) {
+        ol.hidden = ol.dataset.passos !== opcao;
+      });
+      atualizarPlanos();
+    }
+    document.querySelectorAll("[data-opcao]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        history.replaceState(null, "", "#" + b.dataset.opcao);
+        escolherOpcao(b.dataset.opcao);
+      });
+    });
+
+    // Mostra o catálogo de acordo com o link (#portabilidade, #transferencia, #linha-nova, #internet)
+    function mostrarCaminho(rolar) {
+      var hash = location.hash.replace("#", "");
+      var caminho = (hash === "portabilidade" || hash === "internet") ? hash
+        : (hash === "transferencia" || hash === "linha-nova") ? "empresa"
+        : "";
+
+      // Links para outras partes da página (#combo, #escolha) não fecham o catálogo aberto
+      if (!caminho && hash) return;
+
+      if (caminho === "empresa") escolherOpcao(hash);
+
+      document.querySelectorAll(".catalogo").forEach(function (s) {
+        s.hidden = s.id !== "catalogo-" + caminho;
+      });
+      document.querySelectorAll("[data-caminho]").forEach(function (a) {
+        a.setAttribute("aria-current", a.dataset.caminho === caminho);
+      });
+
+      if (caminho && rolar) {
+        document.getElementById("catalogo-" + caminho).scrollIntoView({ block: "start" });
+      }
+    }
+
+    document.querySelectorAll("[data-voltar]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        history.replaceState(null, "", location.pathname);
+        mostrarCaminho(false);
+        document.getElementById("escolha").scrollIntoView({ block: "start" });
+      });
+    });
+
+    window.addEventListener("hashchange", function () { mostrarCaminho(true); });
+    atualizarPlanos();
+    mostrarCaminho(true);
+  </script>
+
+</body>
+</html>
