@@ -2,7 +2,8 @@
 
 Cada consultor ganha uma pasta própria (ex.: everton/) com o mesmo
 catálogo, trocando só nome, WhatsApp e foto. Depois de mudar preços ou
-textos no index.html, rode de novo:
+textos no index.html, as páginas dos consultores são regeradas sozinhas
+(GitHub Actions, .github/workflows/consultores.yml). Para rodar na mão:
 
     python3 gerar_consultores.py
 
@@ -23,6 +24,22 @@ CONSULTORES = [
         "whatsapp": "5541987482014",          # 55 + DDD + número, só números
         "whatsapp_exibicao": "(41) 98748-2014",
         "feminino": False,
+    },
+    {
+        "pasta": "kauan",
+        "nome": "Kauan",
+        "primeiro_nome": "Kauan",
+        "whatsapp": "554298484317",
+        "whatsapp_exibicao": "(42) 9848-4317",
+        "feminino": False,
+    },
+    {
+        "pasta": "camily",
+        "nome": "Camily Antunes",
+        "primeiro_nome": "Camily",
+        "whatsapp": "554299476786",
+        "whatsapp_exibicao": "(42) 9947-6786",
+        "feminino": True,
     },
 ]
 
