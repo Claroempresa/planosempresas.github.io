@@ -377,6 +377,32 @@ await teste("benefícios: Wellhub é desconto de parceiro (até 40%); M365 é co
   assert.match(await txt(page, ".legenda"), /Incluso no plano.*Desconto de parceiro.*Contratação adicional/);
   await ctx.close();
 });
+for (const largura of [390, 1280]) {
+  await teste(`benefícios: dois por linha e com logo (${largura}px)`, async () => {
+    const { page, ctx } = await abrir("", largura, 900);
+    const tops = await page.$$eval("#lista-beneficios .beneficio", (as) => as.map((a) => Math.round(a.getBoundingClientRect().top + scrollY)));
+    const lefts = await page.$$eval("#lista-beneficios .beneficio", (as) => as.map((a) => Math.round(a.getBoundingClientRect().left)));
+    assert.equal(tops[0], tops[1], "1º e 2º devem estar na mesma linha");
+    assert.ok(tops[2] > tops[0], "3º deve ir para a linha de baixo");
+    assert.equal(tops[2], tops[3]);
+    assert.ok(lefts[1] > lefts[0], "2º fica ao lado do 1º");
+    assert.equal(new Set(lefts).size, 2, "só duas colunas");
+    // logos: Wellhub, WhatsApp+Waze, McAfee carregam; benefício sem logo usa ícone
+    const wellhub = page.locator(".beneficio", { hasText: "Wellhub" }).locator("img");
+    await wellhub.scrollIntoViewIfNeeded();
+    assert.match(await wellhub.getAttribute("src"), /logos\/wellhub\.png$/);
+    await page.waitForFunction(() => [...document.querySelectorAll(".beneficio img")].every((i) => i.complete), null, { timeout: 5000 });
+    const quebradas = await page.$$eval(".beneficio img", (is) => is.filter((i) => i.complete && i.naturalWidth === 0).map((i) => i.src));
+    assert.deepEqual(quebradas, []);
+    assert.equal(await page.locator(".beneficio", { hasText: "WhatsApp e Waze" }).locator("img").count(), 2);
+    assert.equal(await page.locator(".beneficio", { hasText: "Tecnologia 5G" }).locator("img").count(), 0);
+    assert.equal(await page.locator(".beneficio", { hasText: "Tecnologia 5G" }).locator("svg").count(), 1);
+    assert.ok((await page.locator(".beneficio img").count()) >= 14);
+    const w = await page.evaluate(() => [document.documentElement.scrollWidth, innerWidth]);
+    assert.ok(w[0] <= w[1], `rolagem horizontal ${w}`);
+    await ctx.close();
+  });
+}
 await teste("cobertura: valida o CEP, não inventa resultado e envia o endereço por WhatsApp", async () => {
   const { page, ctx } = await abrir("kauan/#cobertura");
   await page.fill("#c-cep", "840");

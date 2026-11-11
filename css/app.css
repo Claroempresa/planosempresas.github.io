@@ -243,20 +243,33 @@ select:focus, input:focus { border-color: var(--azul-texto); }
 .analise h3 { font-size: 20px; }
 .analise p { color: var(--suave); margin-bottom: 8px; }
 
-/* ---------- Benefícios ---------- */
+/* ---------- Benefícios (dois por linha) ---------- */
 .legenda { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
 .etiqueta { display: inline-block; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 999px; }
 .etiqueta--incluso { background: var(--verde-suave); color: #0F5A2C; }
 .etiqueta--desconto { background: var(--azul-suave); color: var(--azul-texto); }
 .etiqueta--pago { background: var(--amarelo-suave); color: var(--amarelo-texto); }
-.beneficio { display: grid; gap: 10px; align-content: start; padding: 24px; background: var(--fundo); border: 1px solid var(--linha); border-radius: var(--raio); }
-.beneficio__topo { display: flex; align-items: center; gap: 14px; }
-.beneficio__icone { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; background: var(--vermelho-suave); color: var(--vermelho); flex: none; }
-.beneficio__titulo { display: grid; gap: 6px; justify-items: start; min-width: 0; }
-.beneficio h3 { font-size: 16px; }
-.beneficio > p { font-size: 15px; color: var(--suave); }
-.beneficio summary { min-height: 44px; display: inline-flex; align-items: center; font-size: 14px; font-weight: 600; color: var(--suave); cursor: pointer; }
-.beneficio .detalhes p strong { color: var(--texto); }
+.cartoes.cartoes--pequenos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.beneficio { display: grid; gap: 14px; align-content: start; padding: 16px; background: var(--fundo); border: 1px solid var(--linha); border-radius: var(--raio); min-width: 0; }
+.beneficio__logo { display: flex; align-items: center; justify-content: center; gap: 8px; height: 72px; padding: 10px; background: var(--superficie); border-radius: 14px; }
+.beneficio__logo img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+.beneficio__logo--escuro { background: var(--texto); }
+.beneficio__logo--escuro img { max-height: 28px; }
+.beneficio__logo:not(.beneficio__logo--escuro):not(.beneficio__logo--icone) img { max-height: 48px; }
+.beneficio__logo--icone { background: var(--vermelho-suave); color: var(--vermelho); }
+.beneficio__logo--icone svg { width: 34px; height: 34px; }
+.beneficio__corpo { display: grid; gap: 8px; justify-items: start; align-content: start; min-width: 0; }
+.beneficio h3 { font-size: 15px; line-height: 1.25; overflow-wrap: anywhere; }
+.beneficio__corpo > p { font-size: 14px; color: var(--suave); }
+.beneficio summary { min-height: 44px; display: inline-flex; align-items: center; font-size: 13.5px; font-weight: 600; color: var(--suave); cursor: pointer; }
+.beneficio .detalhes { font-size: 13.5px; }
+@media (min-width: 760px) {
+  .cartoes.cartoes--pequenos { gap: 20px; }
+  .beneficio { grid-template-columns: 132px minmax(0, 1fr); gap: 22px; padding: 24px; align-items: start; }
+  .beneficio__logo { height: 88px; }
+  .beneficio h3 { font-size: 17px; }
+  .beneficio__corpo > p { font-size: 15px; }
+}
 
 /* ---------- Instalar ---------- */
 .instalar { display: grid; gap: 32px; align-items: start; }

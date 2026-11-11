@@ -1,52 +1,269 @@
 [
-  {"id":"whatsapp-waze","nome":"WhatsApp e Waze sem descontar da franquia","categoria":"conectividade","tipo":"incluso","icone":"i-celular",
-   "explicacao":"Você usa o WhatsApp (mensagens, chamadas de voz e vídeo) e o Waze sem gastar a internet do plano.",
-   "aplicabilidade":"Planos Claro Pós para empresas e combos.","condicoes":"Conforme as regras do plano contratado."},
-  {"id":"5g","nome":"Tecnologia 5G","categoria":"conectividade","tipo":"incluso","icone":"i-sinal",
-   "explicacao":"Internet móvel mais rápida onde a rede 5G da Claro estiver disponível.",
-   "aplicabilidade":"Planos Claro Pós.","condicoes":"Depende da cobertura 5G no local e de aparelho compatível."},
-  {"id":"passaporte","nome":"Claro Passaporte Américas","categoria":"conectividade","tipo":"incluso","icone":"i-aviao",
-   "explicacao":"5GB de internet para usar nas Américas, como se estivesse no Brasil, sem custo extra.",
-   "aplicabilidade":"Claro Pós 70GB, 100GB e 150GB.","condicoes":"Países e regras conforme o regulamento do serviço."},
-  {"id":"mega-bonus","nome":"+50GB de Mega Bônus","categoria":"conectividade","tipo":"incluso","icone":"i-presente",
-   "explicacao":"Quem contrata Claro fibra e Claro Pós juntos ganha 50GB a mais, que podem ser compartilhados entre as linhas pelo Gestor Online.",
-   "aplicabilidade":"Combos de internet fibra + Claro Pós.","condicoes":"Vale para a oferta vigente de convergência."},
-  {"id":"wifi-plus","nome":"Wi-Fi Plus","categoria":"conectividade","tipo":"incluso","icone":"i-wifi",
-   "explicacao":"Mais alcance e desempenho do sinal nos ambientes da empresa.","aplicabilidade":"Claro fibra 400 e 600 Mega.","condicoes":"Equipamento sem cobrança, conforme o contrato."},
-  {"id":"wifi6","nome":"Wi-Fi 6","categoria":"conectividade","tipo":"incluso","icone":"i-wifi",
-   "explicacao":"Mais velocidade, menos travamento e mais aparelhos conectados ao mesmo tempo.","aplicabilidade":"Claro fibra 800 Mega e 1 Giga.","condicoes":"Equipamento sem cobrança, conforme o contrato."},
-  {"id":"claro-clube","nome":"Claro Clube para Empresas","categoria":"vantagens","tipo":"desconto","icone":"i-presente",
-   "explicacao":"Descontos e vantagens de marcas parceiras para o cliente, a equipe e o negócio.","aplicabilidade":"Todo cliente Claro Empresas.",
-   "condicoes":"Acesso pela área logada do Minha Claro Empresas. Parceiros e ofertas mudam com o tempo."},
-  {"id":"wellhub","nome":"Wellhub (antigo Gympass)","categoria":"vantagens","tipo":"desconto","icone":"i-coracao",
-   "explicacao":"Até 40% de desconto no Wellhub para cuidar da saúde e do bem-estar da equipe.","aplicabilidade":"Clientes Claro Empresas, pelo Claro Clube.",
-   "condicoes":"Desconto de parceiro, não é gratuito. Percentual e prazo conforme a oferta vigente."},
-  {"id":"gestor","nome":"Gestor Online","categoria":"servicos","tipo":"incluso","icone":"i-engrenagem",
-   "explicacao":"Gerencie as linhas da empresa e compartilhe internet entre elas.","aplicabilidade":"Planos Claro Pós.","condicoes":"Conforme o plano."},
-  {"id":"recados","nome":"Claro recados","categoria":"servicos","tipo":"incluso","icone":"i-chat",
-   "explicacao":"Gestão de recados e chamadas.","aplicabilidade":"Planos Claro Pós.","condicoes":"Conforme o plano."},
-  {"id":"monitor","nome":"Claro monitor","categoria":"servicos","tipo":"incluso","icone":"i-escudo",
-   "explicacao":"Gestão e segurança dos aparelhos da empresa.","aplicabilidade":"Planos Claro Pós.","condicoes":"Conforme o plano."},
-  {"id":"mcafee","nome":"Proteção digital McAfee","categoria":"servicos","tipo":"incluso","icone":"i-escudo",
-   "explicacao":"Antivírus e VPN para os aparelhos.","aplicabilidade":"Planos Claro Pós.","condicoes":"Número de dispositivos conforme o plano."},
-  {"id":"mcafee3","nome":"McAfee para 3 dispositivos","categoria":"servicos","tipo":"incluso","icone":"i-escudo",
-   "explicacao":"Antivírus e VPN para até 3 dispositivos.","aplicabilidade":"Claro fibra 400 e 600 Mega.","condicoes":"Conforme o plano."},
-  {"id":"mcafee5","nome":"McAfee para 5 dispositivos","categoria":"servicos","tipo":"incluso","icone":"i-escudo",
-   "explicacao":"Antivírus e VPN para até 5 dispositivos.","aplicabilidade":"Claro fibra 800 Mega e 1 Giga.","condicoes":"Conforme o plano."},
-  {"id":"skeelo","nome":"Skeelo","categoria":"servicos","tipo":"incluso","icone":"i-livro",
-   "explicacao":"Audiobooks dos livros mais vendidos.","aplicabilidade":"Planos Claro Pós e Claro fibra.","condicoes":"Conforme o plano."},
-  {"id":"banca","nome":"Claro banca","categoria":"servicos","tipo":"incluso","icone":"i-livro",
-   "explicacao":"Revistas e jornais digitais.","aplicabilidade":"Claro Pós 30GB ou mais e Claro fibra 600 Mega ou mais.","condicoes":"Conforme o plano."},
-  {"id":"cloud","nome":"Cloud 1,5TB","categoria":"servicos","tipo":"incluso","icone":"i-nuvem",
-   "explicacao":"Armazenamento em nuvem para os arquivos da empresa.","aplicabilidade":"Claro Pós 150GB.","condicoes":"Conforme o plano."},
-  {"id":"m365","nome":"Microsoft 365","categoria":"servicos","tipo":"contratacao","icone":"i-nuvem",
-   "explicacao":"E-mail, pacote Office e Teams na nuvem.","aplicabilidade":"Claro fibra 1 Giga inclui; nos demais, contratação adicional.","condicoes":"Serviço pago, valores sob consulta."},
-  {"id":"central-10621","nome":"Central exclusiva 10621","categoria":"atendimento","tipo":"incluso","icone":"i-fone",
-   "explicacao":"Central de atendimento Claro Empresas para clientes de internet fibra.","aplicabilidade":"Claro fibra.","condicoes":"Atendimento da Claro."},
-  {"id":"suporte-4h","nome":"Suporte técnico em até 4 horas","categoria":"atendimento","tipo":"incluso","icone":"i-engrenagem",
-   "explicacao":"Atendimento técnico para a sua internet fibra.","aplicabilidade":"Claro fibra.","condicoes":"Prazo conforme as regras do serviço."},
-  {"id":"instalacao-24h","nome":"Instalação em até 24 horas","categoria":"atendimento","tipo":"incluso","icone":"i-engrenagem",
-   "explicacao":"Instalação rápida depois do contrato gerado, sem taxa de adesão na fidelidade de 24 meses.","aplicabilidade":"Claro fibra.","condicoes":"Contada a partir da geração do contrato. Sujeita à disponibilidade."},
-  {"id":"minha-claro","nome":"Minha Claro Empresas","categoria":"atendimento","tipo":"incluso","icone":"i-celular",
-   "explicacao":"Área do cliente para acompanhar e gerenciar os serviços e acessar o Claro Clube.","aplicabilidade":"Todo cliente Claro Empresas.","condicoes":"Acesso com login do administrador."}
+ {
+  "id": "whatsapp-waze",
+  "nome": "WhatsApp e Waze sem descontar da franquia",
+  "categoria": "conectividade",
+  "tipo": "incluso",
+  "icone": "i-celular",
+  "explicacao": "Você usa o WhatsApp (mensagens, chamadas de voz e vídeo) e o Waze sem gastar a internet do plano.",
+  "aplicabilidade": "Planos Claro Pós para empresas e combos.",
+  "condicoes": "Conforme as regras do plano contratado.",
+  "logos": [
+   "whatsapp.png",
+   "waze.png"
+  ]
+ },
+ {
+  "id": "5g",
+  "nome": "Tecnologia 5G",
+  "categoria": "conectividade",
+  "tipo": "incluso",
+  "icone": "i-sinal",
+  "explicacao": "Internet móvel mais rápida onde a rede 5G da Claro estiver disponível.",
+  "aplicabilidade": "Planos Claro Pós.",
+  "condicoes": "Depende da cobertura 5G no local e de aparelho compatível."
+ },
+ {
+  "id": "passaporte",
+  "nome": "Claro Passaporte Américas",
+  "categoria": "conectividade",
+  "tipo": "incluso",
+  "icone": "i-aviao",
+  "explicacao": "5GB de internet para usar nas Américas, como se estivesse no Brasil, sem custo extra.",
+  "aplicabilidade": "Claro Pós 70GB, 100GB e 150GB.",
+  "condicoes": "Países e regras conforme o regulamento do serviço.",
+  "logos": [
+   "claro-passaporte.png"
+  ],
+  "logoEscuro": true
+ },
+ {
+  "id": "mega-bonus",
+  "nome": "+50GB de Mega Bônus",
+  "categoria": "conectividade",
+  "tipo": "incluso",
+  "icone": "i-presente",
+  "explicacao": "Quem contrata Claro fibra e Claro Pós juntos ganha 50GB a mais, que podem ser compartilhados entre as linhas pelo Gestor Online.",
+  "aplicabilidade": "Combos de internet fibra + Claro Pós.",
+  "condicoes": "Vale para a oferta vigente de convergência."
+ },
+ {
+  "id": "wifi-plus",
+  "nome": "Wi-Fi Plus",
+  "categoria": "conectividade",
+  "tipo": "incluso",
+  "icone": "i-wifi",
+  "explicacao": "Mais alcance e desempenho do sinal nos ambientes da empresa.",
+  "aplicabilidade": "Claro fibra 400 e 600 Mega.",
+  "condicoes": "Equipamento sem cobrança, conforme o contrato.",
+  "logos": [
+   "wifi-plus.png"
+  ]
+ },
+ {
+  "id": "wifi6",
+  "nome": "Wi-Fi 6",
+  "categoria": "conectividade",
+  "tipo": "incluso",
+  "icone": "i-wifi",
+  "explicacao": "Mais velocidade, menos travamento e mais aparelhos conectados ao mesmo tempo.",
+  "aplicabilidade": "Claro fibra 800 Mega e 1 Giga.",
+  "condicoes": "Equipamento sem cobrança, conforme o contrato.",
+  "logos": [
+   "wifi-6.png"
+  ]
+ },
+ {
+  "id": "claro-clube",
+  "nome": "Claro Clube para Empresas",
+  "categoria": "vantagens",
+  "tipo": "desconto",
+  "icone": "i-presente",
+  "explicacao": "Descontos e vantagens de marcas parceiras para o cliente, a equipe e o negócio.",
+  "aplicabilidade": "Todo cliente Claro Empresas.",
+  "condicoes": "Acesso pela área logada do Minha Claro Empresas. Parceiros e ofertas mudam com o tempo."
+ },
+ {
+  "id": "wellhub",
+  "nome": "Wellhub (antigo Gympass)",
+  "categoria": "vantagens",
+  "tipo": "desconto",
+  "icone": "i-coracao",
+  "explicacao": "Até 40% de desconto no Wellhub para cuidar da saúde e do bem-estar da equipe.",
+  "aplicabilidade": "Clientes Claro Empresas, pelo Claro Clube.",
+  "condicoes": "Desconto de parceiro, não é gratuito. Percentual e prazo conforme a oferta vigente.",
+  "logos": [
+   "wellhub.png"
+  ]
+ },
+ {
+  "id": "gestor",
+  "nome": "Gestor Online",
+  "categoria": "servicos",
+  "tipo": "incluso",
+  "icone": "i-engrenagem",
+  "explicacao": "Gerencie as linhas da empresa e compartilhe internet entre elas.",
+  "aplicabilidade": "Planos Claro Pós.",
+  "condicoes": "Conforme o plano.",
+  "logos": [
+   "gestor-online.png"
+  ],
+  "logoEscuro": true
+ },
+ {
+  "id": "recados",
+  "nome": "Claro recados",
+  "categoria": "servicos",
+  "tipo": "incluso",
+  "icone": "i-chat",
+  "explicacao": "Gestão de recados e chamadas.",
+  "aplicabilidade": "Planos Claro Pós.",
+  "condicoes": "Conforme o plano.",
+  "logos": [
+   "claro-recados.png"
+  ],
+  "logoEscuro": true
+ },
+ {
+  "id": "monitor",
+  "nome": "Claro monitor",
+  "categoria": "servicos",
+  "tipo": "incluso",
+  "icone": "i-escudo",
+  "explicacao": "Gestão e segurança dos aparelhos da empresa.",
+  "aplicabilidade": "Planos Claro Pós.",
+  "condicoes": "Conforme o plano.",
+  "logos": [
+   "claro-monitor.png"
+  ],
+  "logoEscuro": true
+ },
+ {
+  "id": "mcafee",
+  "nome": "Proteção digital McAfee",
+  "categoria": "servicos",
+  "tipo": "incluso",
+  "icone": "i-escudo",
+  "explicacao": "Antivírus e VPN para os aparelhos.",
+  "aplicabilidade": "Planos Claro Pós.",
+  "condicoes": "Número de dispositivos conforme o plano.",
+  "logos": [
+   "mcafee.png"
+  ]
+ },
+ {
+  "id": "mcafee3",
+  "nome": "McAfee para 3 dispositivos",
+  "categoria": "servicos",
+  "tipo": "incluso",
+  "icone": "i-escudo",
+  "explicacao": "Antivírus e VPN para até 3 dispositivos.",
+  "aplicabilidade": "Claro fibra 400 e 600 Mega.",
+  "condicoes": "Conforme o plano.",
+  "logos": [
+   "mcafee.png"
+  ]
+ },
+ {
+  "id": "mcafee5",
+  "nome": "McAfee para 5 dispositivos",
+  "categoria": "servicos",
+  "tipo": "incluso",
+  "icone": "i-escudo",
+  "explicacao": "Antivírus e VPN para até 5 dispositivos.",
+  "aplicabilidade": "Claro fibra 800 Mega e 1 Giga.",
+  "condicoes": "Conforme o plano.",
+  "logos": [
+   "mcafee.png"
+  ]
+ },
+ {
+  "id": "skeelo",
+  "nome": "Skeelo",
+  "categoria": "servicos",
+  "tipo": "incluso",
+  "icone": "i-livro",
+  "explicacao": "Audiobooks dos livros mais vendidos.",
+  "aplicabilidade": "Planos Claro Pós e Claro fibra.",
+  "condicoes": "Conforme o plano.",
+  "logos": [
+   "skeelo.png"
+  ]
+ },
+ {
+  "id": "banca",
+  "nome": "Claro banca",
+  "categoria": "servicos",
+  "tipo": "incluso",
+  "icone": "i-livro",
+  "explicacao": "Revistas e jornais digitais.",
+  "aplicabilidade": "Claro Pós 30GB ou mais e Claro fibra 600 Mega ou mais.",
+  "condicoes": "Conforme o plano.",
+  "logos": [
+   "claro-banca.png"
+  ]
+ },
+ {
+  "id": "cloud",
+  "nome": "Cloud 1,5TB",
+  "categoria": "servicos",
+  "tipo": "incluso",
+  "icone": "i-nuvem",
+  "explicacao": "Armazenamento em nuvem para os arquivos da empresa.",
+  "aplicabilidade": "Claro Pós 150GB.",
+  "condicoes": "Conforme o plano."
+ },
+ {
+  "id": "m365",
+  "nome": "Microsoft 365",
+  "categoria": "servicos",
+  "tipo": "contratacao",
+  "icone": "i-nuvem",
+  "explicacao": "E-mail, pacote Office e Teams na nuvem.",
+  "aplicabilidade": "Claro fibra 1 Giga inclui; nos demais, contratação adicional.",
+  "condicoes": "Serviço pago, valores sob consulta.",
+  "logos": [
+   "microsoft-365.png"
+  ]
+ },
+ {
+  "id": "central-10621",
+  "nome": "Central exclusiva 10621",
+  "categoria": "atendimento",
+  "tipo": "incluso",
+  "icone": "i-fone",
+  "explicacao": "Central de atendimento Claro Empresas para clientes de internet fibra.",
+  "aplicabilidade": "Claro fibra.",
+  "condicoes": "Atendimento da Claro."
+ },
+ {
+  "id": "suporte-4h",
+  "nome": "Suporte técnico em até 4 horas",
+  "categoria": "atendimento",
+  "tipo": "incluso",
+  "icone": "i-engrenagem",
+  "explicacao": "Atendimento técnico para a sua internet fibra.",
+  "aplicabilidade": "Claro fibra.",
+  "condicoes": "Prazo conforme as regras do serviço."
+ },
+ {
+  "id": "instalacao-24h",
+  "nome": "Instalação em até 24 horas",
+  "categoria": "atendimento",
+  "tipo": "incluso",
+  "icone": "i-engrenagem",
+  "explicacao": "Instalação rápida depois do contrato gerado, sem taxa de adesão na fidelidade de 24 meses.",
+  "aplicabilidade": "Claro fibra.",
+  "condicoes": "Contada a partir da geração do contrato. Sujeita à disponibilidade."
+ },
+ {
+  "id": "minha-claro",
+  "nome": "Minha Claro Empresas",
+  "categoria": "atendimento",
+  "tipo": "incluso",
+  "icone": "i-celular",
+  "explicacao": "Área do cliente para acompanhar e gerenciar os serviços e acessar o Claro Clube.",
+  "aplicabilidade": "Todo cliente Claro Empresas.",
+  "condicoes": "Acesso com login do administrador."
+ }
 ]
