@@ -1,0 +1,39 @@
+[
+  {
+    "pasta": "",
+    "nome": "Evelyn Hartmann",
+    "primeiroNome": "Evelyn",
+    "feminino": true,
+    "whatsapp": "5542998242620",
+    "whatsappExibicao": "(42) 99824-2620",
+    "foto": "retrato.jpg",
+    "instagram": "teraclaro"
+  },
+  {
+    "pasta": "everton",
+    "nome": "Everton Maia",
+    "primeiroNome": "Everton",
+    "feminino": false,
+    "whatsapp": "5541987482014",
+    "whatsappExibicao": "(41) 98748-2014",
+    "foto": "foto.jpg"
+  },
+  {
+    "pasta": "kauan",
+    "nome": "Kauan",
+    "primeiroNome": "Kauan",
+    "feminino": false,
+    "whatsapp": "554298484317",
+    "whatsappExibicao": "(42) 9848-4317",
+    "foto": "foto.jpg"
+  },
+  {
+    "pasta": "camily",
+    "nome": "Camily Antunes",
+    "primeiroNome": "Camily",
+    "feminino": true,
+    "whatsapp": "554299476786",
+    "whatsappExibicao": "(42) 9947-6786",
+    "foto": "foto.jpg"
+  }
+]

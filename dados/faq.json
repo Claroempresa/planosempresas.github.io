@@ -1,0 +1,12 @@
+[
+ {"p":"Vou perder meu número na portabilidade?","r":"Não. Na portabilidade você continua com o mesmo número, só muda a operadora para a Claro."},
+ {"p":"Qual a diferença entre portabilidade e transferência de CPF para CNPJ?","r":"Na portabilidade você traz o número de outra operadora para a Claro. Na transferência de titularidade a linha já é Claro e passa do seu CPF para o CNPJ da empresa, mantendo o número. Cada caso passa por análise de elegibilidade."},
+ {"p":"Posso passar minha linha do CPF para o CNPJ?","r":"Em geral sim, sujeito à análise. Eu te passo a lista de documentos e acompanho a transferência. Você continua com o mesmo número, agora no plano da empresa."},
+ {"p":"Sou MEI. Posso contratar os planos para empresas?","r":"Sim. O MEI tem CNPJ e pode contratar os planos Claro Pós para empresas, sujeito à análise de crédito."},
+ {"p":"Os planos têm fidelidade?","r":"Sim, a fidelidade é de 24 meses. Isso garante que o valor do seu plano fique o mesmo, sem aumentar. Nas ofertas com desconto nos primeiros meses, o valor promocional vale pelo período indicado no plano."},
+ {"p":"O que é o bônus de internet?","r":"É uma franquia extra de uso livre que soma à franquia do plano. Por exemplo, o Claro Pós 80GB tem 25GB do plano e 55GB de bônus. Já o Mega Bônus de 50GB vem nos combos de fibra com Claro Pós e pode ser compartilhado entre as linhas."},
+ {"p":"A internet Wi-Fi está disponível no meu endereço?","r":"Depende da cobertura da Claro na sua região. Use o campo de cobertura desta página ou me mande o CEP da empresa pelo WhatsApp que eu consulto para você."},
+ {"p":"Como funciona a análise gratuita?","r":"Você me informa quanto paga hoje e quantas linhas tem, ou envia a foto da fatura pelo WhatsApp. Eu comparo com os planos Claro e mostro a diferença. Não tem custo nem compromisso."},
+ {"p":"Como contrato?","r":"Escolha o plano e fale comigo pelo WhatsApp. Eu faço o cadastro, te passo os documentos necessários e acompanho até a linha ou a internet funcionar."},
+ {"p":"Como é o atendimento?","r":"Você é atendido diretamente por um consultor de Revenda Autorizada Claro pelo WhatsApp. Para internet fibra, a Claro também tem a central exclusiva de empresas, o 10621."}
+]

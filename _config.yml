@@ -1,0 +1,10 @@
+# O GitHub Pages usa isto para NÃO publicar arquivos internos.
+exclude:
+  - fonte
+  - modelo
+  - scripts
+  - tests
+  - package.json
+  - node_modules
+  - README.md
+  - gerar_consultores.py

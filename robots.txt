@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://claroempresa.github.io/planosempresas.github.io/sitemap.xml
