@@ -1,0 +1,9 @@
+{
+  "name": "claro-empresas-consultoria",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "gerar": "python3 scripts/gerar.py",
+    "test": "node --test tests/unidade.test.js"
+  }
+}

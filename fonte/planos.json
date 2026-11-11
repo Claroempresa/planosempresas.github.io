@@ -1,0 +1,1078 @@
+[
+ {
+  "id": "pos-20",
+  "nome": "Claro Pós 20GB",
+  "categoria": "movel",
+  "franquiaGB": 2,
+  "bonusGB": 18,
+  "megaBonusGB": 0,
+  "totalGB": 20,
+  "valorMensal": 34.99,
+  "promocao": null,
+  "pagamento": "Fatura mensal, por linha",
+  "fidelidade": "24 meses, com valor fixo",
+  "beneficios": [
+   "gestor",
+   "skeelo",
+   "recados",
+   "monitor",
+   "mcafee",
+   "whatsapp-waze"
+  ],
+  "restricoes": "Exclusivo para CNPJ e MEI. Sujeito à análise de elegibilidade e de crédito.",
+  "grupoMercado": "Todos",
+  "dataReferencia": "2026-11",
+  "selo": "Black Friday",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 44
+  }
+ },
+ {
+  "id": "pos-30",
+  "nome": "Claro Pós 30GB",
+  "categoria": "movel",
+  "franquiaGB": 15,
+  "bonusGB": 15,
+  "megaBonusGB": 0,
+  "totalGB": 30,
+  "valorMensal": 44.99,
+  "promocao": null,
+  "pagamento": "Fatura mensal, por linha",
+  "fidelidade": "24 meses, com valor fixo",
+  "beneficios": [
+   "gestor",
+   "banca",
+   "skeelo",
+   "recados",
+   "monitor",
+   "mcafee",
+   "whatsapp-waze"
+  ],
+  "restricoes": "Exclusivo para CNPJ e MEI. Sujeito à análise de elegibilidade e de crédito.",
+  "grupoMercado": "Todos",
+  "dataReferencia": "2026-11",
+  "selo": "Black Friday",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 44
+  }
+ },
+ {
+  "id": "pos-80",
+  "nome": "Claro Pós 80GB",
+  "categoria": "movel",
+  "franquiaGB": 25,
+  "bonusGB": 55,
+  "megaBonusGB": 0,
+  "totalGB": 80,
+  "valorMensal": 54.99,
+  "promocao": null,
+  "pagamento": "Fatura mensal, por linha",
+  "fidelidade": "24 meses, com valor fixo",
+  "beneficios": [
+   "gestor",
+   "banca",
+   "skeelo",
+   "recados",
+   "monitor",
+   "mcafee",
+   "whatsapp-waze"
+  ],
+  "restricoes": "Exclusivo para CNPJ e MEI. Sujeito à análise de elegibilidade e de crédito.",
+  "grupoMercado": "Todos",
+  "dataReferencia": "2026-11",
+  "selo": "Black Friday",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 44
+  }
+ },
+ {
+  "id": "pos-70",
+  "nome": "Claro Pós 70GB",
+  "categoria": "movel",
+  "franquiaGB": 50,
+  "bonusGB": 20,
+  "megaBonusGB": 0,
+  "totalGB": 70,
+  "valorMensal": 74.99,
+  "promocao": null,
+  "pagamento": "Fatura mensal, por linha",
+  "fidelidade": "24 meses, com valor fixo",
+  "beneficios": [
+   "gestor",
+   "banca",
+   "skeelo",
+   "recados",
+   "monitor",
+   "mcafee",
+   "whatsapp-waze",
+   "passaporte"
+  ],
+  "restricoes": "Exclusivo para CNPJ e MEI. Sujeito à análise de elegibilidade e de crédito.",
+  "grupoMercado": "Todos",
+  "dataReferencia": "2026-11",
+  "selo": "",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 44
+  }
+ },
+ {
+  "id": "pos-100",
+  "nome": "Claro Pós 100GB",
+  "categoria": "movel",
+  "franquiaGB": 80,
+  "bonusGB": 20,
+  "megaBonusGB": 0,
+  "totalGB": 100,
+  "valorMensal": 89.99,
+  "promocao": null,
+  "pagamento": "Fatura mensal, por linha",
+  "fidelidade": "24 meses, com valor fixo",
+  "beneficios": [
+   "gestor",
+   "banca",
+   "skeelo",
+   "recados",
+   "monitor",
+   "mcafee",
+   "whatsapp-waze",
+   "passaporte"
+  ],
+  "restricoes": "Exclusivo para CNPJ e MEI. Sujeito à análise de elegibilidade e de crédito.",
+  "grupoMercado": "Todos",
+  "dataReferencia": "2026-11",
+  "selo": "",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 44
+  }
+ },
+ {
+  "id": "pos-150",
+  "nome": "Claro Pós 150GB",
+  "categoria": "movel",
+  "franquiaGB": 150,
+  "bonusGB": 0,
+  "megaBonusGB": 0,
+  "totalGB": 150,
+  "valorMensal": 149.99,
+  "promocao": null,
+  "pagamento": "Fatura mensal, por linha",
+  "fidelidade": "24 meses, com valor fixo",
+  "beneficios": [
+   "gestor",
+   "banca",
+   "skeelo",
+   "recados",
+   "monitor",
+   "mcafee",
+   "whatsapp-waze",
+   "passaporte",
+   "cloud"
+  ],
+  "restricoes": "Exclusivo para CNPJ e MEI. Sujeito à análise de elegibilidade e de crédito.",
+  "grupoMercado": "Todos",
+  "dataReferencia": "2026-11",
+  "selo": "",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 44
+  }
+ },
+ {
+  "id": "fibra-400",
+  "nome": "Claro fibra 400 Mega",
+  "categoria": "fibra",
+  "subtitulo": "Wi-Fi Plus",
+  "velocidadeMega": 400,
+  "valorMensal": 79.9,
+  "promocao": null,
+  "valorComMovel": 79.9,
+  "pagamento": "Boleto. R$ 5,00 de desconto no débito automático com fatura digital.",
+  "fidelidade": "24 meses, sem taxa de adesão",
+  "beneficios": [
+   "wifi-plus",
+   "mcafee3",
+   "skeelo",
+   "suporte-4h",
+   "instalacao-24h",
+   "central-10621"
+  ],
+  "restricoes": "Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
+  "grupoMercado": "Grandes mercados",
+  "dataReferencia": "2026-11",
+  "selo": "",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 30
+  }
+ },
+ {
+  "id": "fibra-600",
+  "nome": "Claro fibra 600 Mega",
+  "categoria": "fibra",
+  "subtitulo": "Wi-Fi Plus",
+  "velocidadeMega": 600,
+  "valorMensal": 59.9,
+  "promocao": {
+   "meses": 3,
+   "valorDepois": 99.9
+  },
+  "valorComMovel": 89.9,
+  "pagamento": "Boleto. R$ 5,00 de desconto no débito automático com fatura digital.",
+  "fidelidade": "24 meses, sem taxa de adesão",
+  "beneficios": [
+   "wifi-plus",
+   "mcafee3",
+   "skeelo",
+   "banca",
+   "suporte-4h",
+   "instalacao-24h",
+   "central-10621"
+  ],
+  "restricoes": "Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
+  "grupoMercado": "Grandes mercados",
+  "dataReferencia": "2026-11",
+  "selo": "Oferta",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 30
+  },
+  "promocaoVariavel": {
+   "minMeses": 0,
+   "maxMeses": 6
+  }
+ },
+ {
+  "id": "fibra-800",
+  "nome": "Claro fibra 800 Mega",
+  "categoria": "fibra",
+  "subtitulo": "Wi-Fi 6",
+  "velocidadeMega": 800,
+  "valorMensal": 99.9,
+  "promocao": null,
+  "valorComMovel": 99.9,
+  "pagamento": "Boleto. R$ 5,00 de desconto no débito automático com fatura digital.",
+  "fidelidade": "24 meses, sem taxa de adesão",
+  "beneficios": [
+   "wifi6",
+   "mcafee5",
+   "skeelo",
+   "banca",
+   "suporte-4h",
+   "instalacao-24h",
+   "central-10621"
+  ],
+  "restricoes": "Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
+  "grupoMercado": "Grandes mercados",
+  "dataReferencia": "2026-11",
+  "selo": "",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 30
+  }
+ },
+ {
+  "id": "fibra-1g",
+  "nome": "Claro fibra 1 Giga",
+  "categoria": "fibra",
+  "subtitulo": "Wi-Fi 6",
+  "velocidadeMega": 1000,
+  "valorMensal": 179.9,
+  "promocao": null,
+  "valorComMovel": 149.9,
+  "pagamento": "Boleto. R$ 5,00 de desconto no débito automático com fatura digital.",
+  "fidelidade": "24 meses, sem taxa de adesão",
+  "beneficios": [
+   "wifi6",
+   "mcafee5",
+   "skeelo",
+   "m365",
+   "suporte-4h",
+   "instalacao-24h",
+   "central-10621"
+  ],
+  "restricoes": "Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
+  "grupoMercado": "Grandes mercados",
+  "dataReferencia": "2026-11",
+  "selo": "",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 29
+  }
+ },
+ {
+  "id": "combo-600-20",
+  "nome": "600 Mega + Claro Pós 20GB",
+  "categoria": "combo",
+  "subtitulo": "Wi-Fi Plus",
+  "componentes": {
+   "fibra": "fibra-600",
+   "movel": "pos-20"
+  },
+  "velocidadeMega": 600,
+  "franquiaGB": 2,
+  "bonusGB": 18,
+  "megaBonusGB": 50,
+  "totalGB": 70,
+  "valorMensal": 94.89,
+  "promocao": {
+   "meses": 3,
+   "valorDepois": 124.89
+  },
+  "pagamento": "Boleto. R$ 5,00 de desconto no débito automático com fatura digital.",
+  "fidelidade": "24 meses",
+  "beneficios": [
+   "banca",
+   "central-10621",
+   "gestor",
+   "instalacao-24h",
+   "mcafee",
+   "mcafee3",
+   "mega-bonus",
+   "monitor",
+   "recados",
+   "skeelo",
+   "suporte-4h",
+   "whatsapp-waze",
+   "wifi-plus"
+  ],
+  "restricoes": "Internet fibra + 1 linha Claro Pós. Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
+  "grupoMercado": "Grandes mercados",
+  "dataReferencia": "2026-11",
+  "selo": "Black Friday",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 13
+  },
+  "promocaoVariavel": {
+   "minMeses": 0,
+   "maxMeses": 6
+  }
+ },
+ {
+  "id": "combo-600-30",
+  "nome": "600 Mega + Claro Pós 30GB",
+  "categoria": "combo",
+  "subtitulo": "Wi-Fi Plus",
+  "componentes": {
+   "fibra": "fibra-600",
+   "movel": "pos-30"
+  },
+  "velocidadeMega": 600,
+  "franquiaGB": 15,
+  "bonusGB": 15,
+  "megaBonusGB": 50,
+  "totalGB": 80,
+  "valorMensal": 104.89,
+  "promocao": {
+   "meses": 3,
+   "valorDepois": 134.89
+  },
+  "pagamento": "Boleto. R$ 5,00 de desconto no débito automático com fatura digital.",
+  "fidelidade": "24 meses",
+  "beneficios": [
+   "banca",
+   "central-10621",
+   "gestor",
+   "instalacao-24h",
+   "mcafee",
+   "mcafee3",
+   "mega-bonus",
+   "monitor",
+   "recados",
+   "skeelo",
+   "suporte-4h",
+   "whatsapp-waze",
+   "wifi-plus"
+  ],
+  "restricoes": "Internet fibra + 1 linha Claro Pós. Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
+  "grupoMercado": "Grandes mercados",
+  "dataReferencia": "2026-11",
+  "selo": "Black Friday",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 13
+  },
+  "promocaoVariavel": {
+   "minMeses": 0,
+   "maxMeses": 6
+  }
+ },
+ {
+  "id": "combo-600-80",
+  "nome": "600 Mega + Claro Pós 80GB",
+  "categoria": "combo",
+  "subtitulo": "Wi-Fi Plus",
+  "componentes": {
+   "fibra": "fibra-600",
+   "movel": "pos-80"
+  },
+  "velocidadeMega": 600,
+  "franquiaGB": 25,
+  "bonusGB": 55,
+  "megaBonusGB": 50,
+  "totalGB": 130,
+  "valorMensal": 114.89,
+  "promocao": {
+   "meses": 3,
+   "valorDepois": 144.89
+  },
+  "pagamento": "Boleto. R$ 5,00 de desconto no débito automático com fatura digital.",
+  "fidelidade": "24 meses",
+  "beneficios": [
+   "banca",
+   "central-10621",
+   "gestor",
+   "instalacao-24h",
+   "mcafee",
+   "mcafee3",
+   "mega-bonus",
+   "monitor",
+   "recados",
+   "skeelo",
+   "suporte-4h",
+   "whatsapp-waze",
+   "wifi-plus"
+  ],
+  "restricoes": "Internet fibra + 1 linha Claro Pós. Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
+  "grupoMercado": "Grandes mercados",
+  "dataReferencia": "2026-11",
+  "selo": "Black Friday",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 13
+  },
+  "promocaoVariavel": {
+   "minMeses": 0,
+   "maxMeses": 6
+  }
+ },
+ {
+  "id": "combo-600-100",
+  "nome": "600 Mega + Claro Pós 100GB",
+  "categoria": "combo",
+  "subtitulo": "Wi-Fi Plus",
+  "componentes": {
+   "fibra": "fibra-600",
+   "movel": "pos-100"
+  },
+  "velocidadeMega": 600,
+  "franquiaGB": 80,
+  "bonusGB": 20,
+  "megaBonusGB": 50,
+  "totalGB": 150,
+  "valorMensal": 149.89,
+  "promocao": {
+   "meses": 3,
+   "valorDepois": 179.89
+  },
+  "pagamento": "Boleto. R$ 5,00 de desconto no débito automático com fatura digital.",
+  "fidelidade": "24 meses",
+  "beneficios": [
+   "banca",
+   "central-10621",
+   "gestor",
+   "instalacao-24h",
+   "mcafee",
+   "mcafee3",
+   "mega-bonus",
+   "monitor",
+   "passaporte",
+   "recados",
+   "skeelo",
+   "suporte-4h",
+   "whatsapp-waze",
+   "wifi-plus"
+  ],
+  "restricoes": "Internet fibra + 1 linha Claro Pós. Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
+  "grupoMercado": "Grandes mercados",
+  "dataReferencia": "2026-11",
+  "selo": "Black Friday",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 13
+  },
+  "promocaoVariavel": {
+   "minMeses": 0,
+   "maxMeses": 6
+  }
+ },
+ {
+  "id": "combo-600-150",
+  "nome": "600 Mega + Claro Pós 150GB",
+  "categoria": "combo",
+  "subtitulo": "Wi-Fi Plus",
+  "componentes": {
+   "fibra": "fibra-600",
+   "movel": "pos-150"
+  },
+  "velocidadeMega": 600,
+  "franquiaGB": 150,
+  "bonusGB": 0,
+  "megaBonusGB": 50,
+  "totalGB": 200,
+  "valorMensal": 209.89,
+  "promocao": {
+   "meses": 3,
+   "valorDepois": 239.89
+  },
+  "pagamento": "Boleto. R$ 5,00 de desconto no débito automático com fatura digital.",
+  "fidelidade": "24 meses",
+  "beneficios": [
+   "banca",
+   "central-10621",
+   "cloud",
+   "gestor",
+   "instalacao-24h",
+   "mcafee",
+   "mcafee3",
+   "mega-bonus",
+   "monitor",
+   "passaporte",
+   "recados",
+   "skeelo",
+   "suporte-4h",
+   "whatsapp-waze",
+   "wifi-plus"
+  ],
+  "restricoes": "Internet fibra + 1 linha Claro Pós. Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
+  "grupoMercado": "Grandes mercados",
+  "dataReferencia": "2026-11",
+  "selo": "Black Friday",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 13
+  },
+  "promocaoVariavel": {
+   "minMeses": 0,
+   "maxMeses": 6
+  }
+ },
+ {
+  "id": "combo-800-20",
+  "nome": "800 Mega + Claro Pós 20GB",
+  "categoria": "combo",
+  "subtitulo": "Wi-Fi 6",
+  "componentes": {
+   "fibra": "fibra-800",
+   "movel": "pos-20"
+  },
+  "velocidadeMega": 800,
+  "franquiaGB": 2,
+  "bonusGB": 18,
+  "megaBonusGB": 50,
+  "totalGB": 70,
+  "valorMensal": 134.89,
+  "promocao": null,
+  "pagamento": "Boleto. R$ 5,00 de desconto no débito automático com fatura digital.",
+  "fidelidade": "24 meses",
+  "beneficios": [
+   "banca",
+   "central-10621",
+   "gestor",
+   "instalacao-24h",
+   "mcafee",
+   "mcafee5",
+   "mega-bonus",
+   "monitor",
+   "recados",
+   "skeelo",
+   "suporte-4h",
+   "whatsapp-waze",
+   "wifi6"
+  ],
+  "restricoes": "Internet fibra + 1 linha Claro Pós. Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
+  "grupoMercado": "Grandes mercados",
+  "dataReferencia": "2026-11",
+  "selo": "Black Friday",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 13
+  }
+ },
+ {
+  "id": "combo-800-30",
+  "nome": "800 Mega + Claro Pós 30GB",
+  "categoria": "combo",
+  "subtitulo": "Wi-Fi 6",
+  "componentes": {
+   "fibra": "fibra-800",
+   "movel": "pos-30"
+  },
+  "velocidadeMega": 800,
+  "franquiaGB": 15,
+  "bonusGB": 15,
+  "megaBonusGB": 50,
+  "totalGB": 80,
+  "valorMensal": 144.89,
+  "promocao": null,
+  "pagamento": "Boleto. R$ 5,00 de desconto no débito automático com fatura digital.",
+  "fidelidade": "24 meses",
+  "beneficios": [
+   "banca",
+   "central-10621",
+   "gestor",
+   "instalacao-24h",
+   "mcafee",
+   "mcafee5",
+   "mega-bonus",
+   "monitor",
+   "recados",
+   "skeelo",
+   "suporte-4h",
+   "whatsapp-waze",
+   "wifi6"
+  ],
+  "restricoes": "Internet fibra + 1 linha Claro Pós. Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
+  "grupoMercado": "Grandes mercados",
+  "dataReferencia": "2026-11",
+  "selo": "Black Friday",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 13
+  }
+ },
+ {
+  "id": "combo-800-80",
+  "nome": "800 Mega + Claro Pós 80GB",
+  "categoria": "combo",
+  "subtitulo": "Wi-Fi 6",
+  "componentes": {
+   "fibra": "fibra-800",
+   "movel": "pos-80"
+  },
+  "velocidadeMega": 800,
+  "franquiaGB": 25,
+  "bonusGB": 55,
+  "megaBonusGB": 50,
+  "totalGB": 130,
+  "valorMensal": 154.89,
+  "promocao": null,
+  "pagamento": "Boleto. R$ 5,00 de desconto no débito automático com fatura digital.",
+  "fidelidade": "24 meses",
+  "beneficios": [
+   "banca",
+   "central-10621",
+   "gestor",
+   "instalacao-24h",
+   "mcafee",
+   "mcafee5",
+   "mega-bonus",
+   "monitor",
+   "recados",
+   "skeelo",
+   "suporte-4h",
+   "whatsapp-waze",
+   "wifi6"
+  ],
+  "restricoes": "Internet fibra + 1 linha Claro Pós. Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
+  "grupoMercado": "Grandes mercados",
+  "dataReferencia": "2026-11",
+  "selo": "Black Friday",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 13
+  }
+ },
+ {
+  "id": "combo-800-100",
+  "nome": "800 Mega + Claro Pós 100GB",
+  "categoria": "combo",
+  "subtitulo": "Wi-Fi 6",
+  "componentes": {
+   "fibra": "fibra-800",
+   "movel": "pos-100"
+  },
+  "velocidadeMega": 800,
+  "franquiaGB": 80,
+  "bonusGB": 20,
+  "megaBonusGB": 50,
+  "totalGB": 150,
+  "valorMensal": 189.89,
+  "promocao": null,
+  "pagamento": "Boleto. R$ 5,00 de desconto no débito automático com fatura digital.",
+  "fidelidade": "24 meses",
+  "beneficios": [
+   "banca",
+   "central-10621",
+   "gestor",
+   "instalacao-24h",
+   "mcafee",
+   "mcafee5",
+   "mega-bonus",
+   "monitor",
+   "passaporte",
+   "recados",
+   "skeelo",
+   "suporte-4h",
+   "whatsapp-waze",
+   "wifi6"
+  ],
+  "restricoes": "Internet fibra + 1 linha Claro Pós. Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
+  "grupoMercado": "Grandes mercados",
+  "dataReferencia": "2026-11",
+  "selo": "Black Friday",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 13
+  }
+ },
+ {
+  "id": "combo-800-150",
+  "nome": "800 Mega + Claro Pós 150GB",
+  "categoria": "combo",
+  "subtitulo": "Wi-Fi 6",
+  "componentes": {
+   "fibra": "fibra-800",
+   "movel": "pos-150"
+  },
+  "velocidadeMega": 800,
+  "franquiaGB": 150,
+  "bonusGB": 0,
+  "megaBonusGB": 50,
+  "totalGB": 200,
+  "valorMensal": 249.89,
+  "promocao": null,
+  "pagamento": "Boleto. R$ 5,00 de desconto no débito automático com fatura digital.",
+  "fidelidade": "24 meses",
+  "beneficios": [
+   "banca",
+   "central-10621",
+   "cloud",
+   "gestor",
+   "instalacao-24h",
+   "mcafee",
+   "mcafee5",
+   "mega-bonus",
+   "monitor",
+   "passaporte",
+   "recados",
+   "skeelo",
+   "suporte-4h",
+   "whatsapp-waze",
+   "wifi6"
+  ],
+  "restricoes": "Internet fibra + 1 linha Claro Pós. Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
+  "grupoMercado": "Grandes mercados",
+  "dataReferencia": "2026-11",
+  "selo": "Black Friday",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 13
+  }
+ },
+ {
+  "id": "combo-1g-20",
+  "nome": "1 Giga + Claro Pós 20GB",
+  "categoria": "combo",
+  "subtitulo": "Wi-Fi 6",
+  "componentes": {
+   "fibra": "fibra-1g",
+   "movel": "pos-20"
+  },
+  "velocidadeMega": 1000,
+  "franquiaGB": 2,
+  "bonusGB": 18,
+  "megaBonusGB": 50,
+  "totalGB": 70,
+  "valorMensal": 184.89,
+  "promocao": null,
+  "pagamento": "Boleto. R$ 5,00 de desconto no débito automático com fatura digital.",
+  "fidelidade": "24 meses",
+  "beneficios": [
+   "central-10621",
+   "gestor",
+   "instalacao-24h",
+   "m365",
+   "mcafee",
+   "mcafee5",
+   "mega-bonus",
+   "monitor",
+   "recados",
+   "skeelo",
+   "suporte-4h",
+   "whatsapp-waze",
+   "wifi6"
+  ],
+  "restricoes": "Internet fibra + 1 linha Claro Pós. Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
+  "grupoMercado": "Grandes mercados",
+  "dataReferencia": "2026-11",
+  "selo": "Black Friday",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 13
+  }
+ },
+ {
+  "id": "combo-1g-30",
+  "nome": "1 Giga + Claro Pós 30GB",
+  "categoria": "combo",
+  "subtitulo": "Wi-Fi 6",
+  "componentes": {
+   "fibra": "fibra-1g",
+   "movel": "pos-30"
+  },
+  "velocidadeMega": 1000,
+  "franquiaGB": 15,
+  "bonusGB": 15,
+  "megaBonusGB": 50,
+  "totalGB": 80,
+  "valorMensal": 194.89,
+  "promocao": null,
+  "pagamento": "Boleto. R$ 5,00 de desconto no débito automático com fatura digital.",
+  "fidelidade": "24 meses",
+  "beneficios": [
+   "banca",
+   "central-10621",
+   "gestor",
+   "instalacao-24h",
+   "m365",
+   "mcafee",
+   "mcafee5",
+   "mega-bonus",
+   "monitor",
+   "recados",
+   "skeelo",
+   "suporte-4h",
+   "whatsapp-waze",
+   "wifi6"
+  ],
+  "restricoes": "Internet fibra + 1 linha Claro Pós. Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
+  "grupoMercado": "Grandes mercados",
+  "dataReferencia": "2026-11",
+  "selo": "Black Friday",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 13
+  }
+ },
+ {
+  "id": "combo-1g-80",
+  "nome": "1 Giga + Claro Pós 80GB",
+  "categoria": "combo",
+  "subtitulo": "Wi-Fi 6",
+  "componentes": {
+   "fibra": "fibra-1g",
+   "movel": "pos-80"
+  },
+  "velocidadeMega": 1000,
+  "franquiaGB": 25,
+  "bonusGB": 55,
+  "megaBonusGB": 50,
+  "totalGB": 130,
+  "valorMensal": 204.89,
+  "promocao": null,
+  "pagamento": "Boleto. R$ 5,00 de desconto no débito automático com fatura digital.",
+  "fidelidade": "24 meses",
+  "beneficios": [
+   "banca",
+   "central-10621",
+   "gestor",
+   "instalacao-24h",
+   "m365",
+   "mcafee",
+   "mcafee5",
+   "mega-bonus",
+   "monitor",
+   "recados",
+   "skeelo",
+   "suporte-4h",
+   "whatsapp-waze",
+   "wifi6"
+  ],
+  "restricoes": "Internet fibra + 1 linha Claro Pós. Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
+  "grupoMercado": "Grandes mercados",
+  "dataReferencia": "2026-11",
+  "selo": "Black Friday",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 13
+  }
+ },
+ {
+  "id": "combo-1g-100",
+  "nome": "1 Giga + Claro Pós 100GB",
+  "categoria": "combo",
+  "subtitulo": "Wi-Fi 6",
+  "componentes": {
+   "fibra": "fibra-1g",
+   "movel": "pos-100"
+  },
+  "velocidadeMega": 1000,
+  "franquiaGB": 80,
+  "bonusGB": 20,
+  "megaBonusGB": 50,
+  "totalGB": 150,
+  "valorMensal": 239.89,
+  "promocao": null,
+  "pagamento": "Boleto. R$ 5,00 de desconto no débito automático com fatura digital.",
+  "fidelidade": "24 meses",
+  "beneficios": [
+   "banca",
+   "central-10621",
+   "gestor",
+   "instalacao-24h",
+   "m365",
+   "mcafee",
+   "mcafee5",
+   "mega-bonus",
+   "monitor",
+   "passaporte",
+   "recados",
+   "skeelo",
+   "suporte-4h",
+   "whatsapp-waze",
+   "wifi6"
+  ],
+  "restricoes": "Internet fibra + 1 linha Claro Pós. Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
+  "grupoMercado": "Grandes mercados",
+  "dataReferencia": "2026-11",
+  "selo": "Black Friday",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 13
+  }
+ },
+ {
+  "id": "combo-1g-150",
+  "nome": "1 Giga + Claro Pós 150GB",
+  "categoria": "combo",
+  "subtitulo": "Wi-Fi 6",
+  "componentes": {
+   "fibra": "fibra-1g",
+   "movel": "pos-150"
+  },
+  "velocidadeMega": 1000,
+  "franquiaGB": 150,
+  "bonusGB": 0,
+  "megaBonusGB": 50,
+  "totalGB": 200,
+  "valorMensal": 299.89,
+  "promocao": null,
+  "pagamento": "Boleto. R$ 5,00 de desconto no débito automático com fatura digital.",
+  "fidelidade": "24 meses",
+  "beneficios": [
+   "banca",
+   "central-10621",
+   "cloud",
+   "gestor",
+   "instalacao-24h",
+   "m365",
+   "mcafee",
+   "mcafee5",
+   "mega-bonus",
+   "monitor",
+   "passaporte",
+   "recados",
+   "skeelo",
+   "suporte-4h",
+   "whatsapp-waze",
+   "wifi6"
+  ],
+  "restricoes": "Internet fibra + 1 linha Claro Pós. Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
+  "grupoMercado": "Grandes mercados",
+  "dataReferencia": "2026-11",
+  "selo": "Black Friday",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 13
+  }
+ },
+ {
+  "id": "sol-m365",
+  "nome": "Microsoft 365",
+  "categoria": "solucao",
+  "subtitulo": "E-mail, pacote Office e Teams para a equipe",
+  "valorMensal": null,
+  "promocao": null,
+  "pagamento": "Sob consulta",
+  "fidelidade": "Conforme o serviço",
+  "beneficios": [
+   "m365"
+  ],
+  "restricoes": "Valores e condições confirmados no atendimento.",
+  "grupoMercado": "Todos",
+  "dataReferencia": "2026-11",
+  "selo": "",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 17
+  }
+ },
+ {
+  "id": "sol-gestao",
+  "nome": "Gestão de linhas",
+  "categoria": "solucao",
+  "subtitulo": "Gestor Online, Claro recados e Claro monitor",
+  "valorMensal": null,
+  "promocao": null,
+  "pagamento": "Sob consulta",
+  "fidelidade": "Conforme o serviço",
+  "beneficios": [
+   "gestor",
+   "recados",
+   "monitor"
+  ],
+  "restricoes": "Valores e condições confirmados no atendimento.",
+  "grupoMercado": "Todos",
+  "dataReferencia": "2026-11",
+  "selo": "",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 17
+  }
+ },
+ {
+  "id": "sol-seguranca",
+  "nome": "Proteção digital",
+  "categoria": "solucao",
+  "subtitulo": "Antivírus McAfee com VPN para os aparelhos",
+  "valorMensal": null,
+  "promocao": null,
+  "pagamento": "Sob consulta",
+  "fidelidade": "Conforme o serviço",
+  "beneficios": [
+   "mcafee"
+  ],
+  "restricoes": "Valores e condições confirmados no atendimento.",
+  "grupoMercado": "Todos",
+  "dataReferencia": "2026-11",
+  "selo": "",
+  "aprovado": true,
+  "fonte": {
+   "documento": "Book Claro Empresas Nov/2026",
+   "pagina": 17
+  }
+ }
+]
