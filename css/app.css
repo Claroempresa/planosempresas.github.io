@@ -121,6 +121,14 @@ h1:focus { outline: none; }
 .consultora strong { color: var(--texto); font-size: 16px; }
 .consultora a { color: var(--texto); font-weight: 600; }
 
+/* ---------- Por que CNPJ ---------- */
+.comparativo { display: grid; gap: 16px; }
+.comparativo__cartao { display: grid; gap: 10px; align-content: start; padding: 28px; background: var(--fundo); border: 1px solid var(--linha); border-radius: var(--raio); color: var(--suave); }
+.comparativo__cartao h3 { font-size: 15px; font-weight: 700; color: var(--suave); }
+.comparativo__destaque { font-size: 22px; font-weight: 800; line-height: 1.25; color: var(--texto); }
+.comparativo__cartao--claro { background: var(--vermelho); border-color: var(--vermelho); color: #fff; }
+.comparativo__cartao--claro h3, .comparativo__cartao--claro .comparativo__destaque { color: #fff; }
+
 /* ---------- Escolha do serviço ---------- */
 .servicos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .servicos button { display: flex; align-items: center; gap: 14px; text-align: left; padding: 18px; min-width: 0; background: var(--fundo); border: 2px solid var(--linha); border-radius: var(--raio); font: inherit; color: var(--texto); cursor: pointer; transition: border-color .15s, background-color .15s; }
@@ -283,6 +291,7 @@ select:focus, input:focus { border-color: var(--azul-texto); }
 @media (min-width: 640px) {
   .jornadas { grid-template-columns: 1fr 1fr; }
   .servicos { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .comparativo { grid-template-columns: 1fr 1fr; }
   .simulador .campos { grid-template-columns: 1fr 1fr; }
   .cartoes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .filtros { grid-template-columns: repeat(4, minmax(0, 1fr)); }

@@ -10,7 +10,7 @@
   "valorMensal": 34.99,
   "promocao": null,
   "pagamento": "Fatura mensal, por linha",
-  "fidelidade": "24 meses",
+  "fidelidade": "24 meses, com valor fixo",
   "beneficios": [
    "gestor",
    "skeelo",
@@ -35,7 +35,7 @@
   "valorMensal": 44.99,
   "promocao": null,
   "pagamento": "Fatura mensal, por linha",
-  "fidelidade": "24 meses",
+  "fidelidade": "24 meses, com valor fixo",
   "beneficios": [
    "gestor",
    "banca",
@@ -61,7 +61,7 @@
   "valorMensal": 54.99,
   "promocao": null,
   "pagamento": "Fatura mensal, por linha",
-  "fidelidade": "24 meses",
+  "fidelidade": "24 meses, com valor fixo",
   "beneficios": [
    "gestor",
    "banca",
@@ -87,7 +87,7 @@
   "valorMensal": 74.99,
   "promocao": null,
   "pagamento": "Fatura mensal, por linha",
-  "fidelidade": "24 meses",
+  "fidelidade": "24 meses, com valor fixo",
   "beneficios": [
    "gestor",
    "banca",
@@ -114,7 +114,7 @@
   "valorMensal": 89.99,
   "promocao": null,
   "pagamento": "Fatura mensal, por linha",
-  "fidelidade": "24 meses",
+  "fidelidade": "24 meses, com valor fixo",
   "beneficios": [
    "gestor",
    "banca",
@@ -141,7 +141,7 @@
   "valorMensal": 149.99,
   "promocao": null,
   "pagamento": "Fatura mensal, por linha",
-  "fidelidade": "24 meses",
+  "fidelidade": "24 meses, com valor fixo",
   "beneficios": [
    "gestor",
    "banca",

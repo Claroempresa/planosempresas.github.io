@@ -79,7 +79,7 @@ def montar(modelo, c, ctx):
     msg = f"Olá, {primeiro}! Vim pelo site e quero falar sobre os planos Claro."
     wa = f"https://wa.me/{c['whatsapp']}?text={quote(msg)}"
     desc = (f"Claro Pós para empresas a partir de {reais(ctx['min_movel'])} por linha, internet fibra a partir de "
-            f"{reais(ctx['min_fibra'])} e combos com +50GB de Mega Bônus. Simule sua economia e fale com {nome}, Revenda Autorizada Claro.")
+            f"{reais(ctx['min_fibra'])} e combos com +50GB de Mega Bônus. No CNPJ o valor fica fixo por 24 meses. Simule sua economia e fale com {nome}, Revenda Autorizada Claro.")
     jsonld = json.dumps({"@context": "https://schema.org", "@graph": [
         {"@type": "WebSite", "name": NOME_APP, "url": url, "inLanguage": "pt-BR"},
         {"@type": "FAQPage", "mainEntity": [

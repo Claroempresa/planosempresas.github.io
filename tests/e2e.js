@@ -75,7 +75,7 @@ for (const largura of [320, 375, 390, 768, 1024, 1440]) {
 console.log("\n== Uma página só, rolando ==");
 await teste("tudo está na mesma página, em ordem, e visível (nada escondido atrás de menu ou passos)", async () => {
   const { page, ctx } = await abrir("");
-  const ids = ["inicio", "contratar", "comparar", "economizar", "beneficios", "cobertura", "instalar", "duvidas"];
+  const ids = ["inicio", "por-que-cnpj", "contratar", "comparar", "economizar", "beneficios", "cobertura", "instalar", "duvidas"];
   let anterior = -1;
   for (const id of ids) {
     assert.equal(await page.locator(`#${id}`).isVisible(), true, id);
@@ -87,6 +87,23 @@ await teste("tudo está na mesma página, em ordem, e visível (nada escondido a
   assert.equal(await page.locator(".jornada").count(), 2);
   assert.equal(await page.locator("#lista-planos .cartao").count(), 6);
   assert.equal(await page.locator("#depoimentos").isVisible(), false);
+  await ctx.close();
+});
+await teste("argumento do CNPJ: valor fixo por 24 meses (no CPF, em geral, aumenta a cada 2 ou 3 meses)", async () => {
+  const { page, ctx } = await abrir("");
+  const sec = await txt(page, "#por-que-cnpj");
+  assert.match(sec, /No CNPJ, o valor fica fixo por 2 anos/);
+  assert.match(sec, /No CPF.*Em geral, o valor aumenta a cada 2 ou 3 meses/);
+  assert.match(sec, /No CNPJ com a Claro.*Valor fixo por 24 meses/);
+  assert.match(sec, /desconto inicial, o valor depois do desconto já é informado na contratação/);
+  // aparece também nos planos, na dúvida e no resultado do simulador
+  await page.locator('article[data-id="pos-80"] summary').click();
+  assert.match(await txt(page, 'article[data-id="pos-80"]'), /Fidelidade: 24 meses, com valor fixo/);
+  assert.match(await page.locator("#duvidas").textContent(), /Por que vale a pena ter a linha no CNPJ\?/);
+  await page.fill("#s-valor", "350");
+  await page.click('#simulador button[type=submit]');
+  assert.match(await txt(page, "#resultado"), /No CPF, em geral, ele aumenta a cada 2 ou 3 meses.*No CNPJ, o valor do plano fica fixo por 24 meses/);
+  assert.match(await page.locator('meta[name="description"]').getAttribute("content"), /No CNPJ o valor fica fixo por 24 meses/);
   await ctx.close();
 });
 await teste("menu rola até cada seção e destaca a seção atual", async () => {

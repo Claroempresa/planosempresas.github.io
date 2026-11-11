@@ -82,6 +82,7 @@ export function iniciarEconomizar(estado) {
       el("ul", {}, [
         el("li", { texto: `Considerado: ${composicao}.` }),
         el("li", { texto: "Custo atual = o que você paga por mês × meses. Custo Claro = a soma do valor de cada mês, com a promoção só pelo tempo em que ela vale." }),
+        el("li", { texto: "Seu valor de hoje foi considerado fixo. No CPF, em geral, ele aumenta a cada 2 ou 3 meses, então a diferença real pode ser maior. No CNPJ, o valor do plano fica fixo por 24 meses." }),
         !economiza && !mistura ? el("li", { texto: "Neste cenário o plano escolhido custa mais do que você paga hoje. Posso sugerir um plano menor." }) : null,
       ]),
       el("a", { classe: "botao botao--whats", target: "_blank", rel: "noopener", href: whats }, [icone("i-whats"), "Receber minha proposta personalizada"]),
