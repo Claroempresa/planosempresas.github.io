@@ -3,8 +3,6 @@ import { brl, emCentavos } from "./formatar.js";
 import { precoNoMes, porCategoria, filtrar, ordenar, PERFIS, ROTULO_CATEGORIA } from "./catalogo.js";
 import { linkWhats, msgPlano } from "./whatsapp.js";
 
-const ROTULO_SERVICO = { movel: "Celular", fibra: "Internet fibra", combo: "Combo fibra + celular", solucao: "Soluções" };
-const ROTULO_OPERACAO = { portabilidade: "Portabilidade", transferencia: "CPF para CNPJ", "linha-nova": "Linha nova" };
 const NOTAS_OPERACAO = {
   portabilidade: "Você traz o número de outra operadora para a Claro e continua com ele. Sujeito à análise de elegibilidade e de crédito.",
   transferencia: "A linha já é Claro e passa do seu CPF para o CNPJ da empresa, mantendo o número. Sujeito à análise de elegibilidade.",
@@ -17,53 +15,42 @@ const COM_PERFIL = ["movel", "combo"];
 export function iniciarContratar(estado) {
   const { catalogo, beneficios, consultor } = estado;
   const nomeBeneficio = (id) => beneficios.find((b) => b.id === id)?.nome ?? id;
-  estado.servico = null;
+  estado.servico = "movel";
   estado.operacao = "portabilidade";
-  let passo = 1;
   let perfil = "";
 
-  // ---------- passos ----------
-  function totalPassos() { return estado.servico === "movel" ? 3 : 2; }
-  function irAoPasso(n) {
-    passo = n;
-    for (const i of [1, 2, 3]) $(`#c-passo${i}`).hidden = i !== n;
-    const total = n === 1 || !estado.servico ? 3 : totalPassos();
-    const numero = n === 3 && total === 2 ? 2 : n;
-    $("#c-passo-texto").textContent = `Passo ${numero} de ${total}`;
-    $("#c-barra").style.width = `${(numero / total) * 100}%`;
-    if (n === 3) renderizar();
-  }
-  function escolherServico(servico) {
+  // ---------- abas de serviço ----------
+  const abas = $$("#servicos [role=tab]");
+  abas.forEach((aba, i) => {
+    aba.addEventListener("click", () => abrirServico(aba.dataset.servico));
+    aba.addEventListener("keydown", (e) => {
+      const passo = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+      if (!passo) return;
+      e.preventDefault();
+      abrirServico(abas[(i + passo + abas.length) % abas.length].dataset.servico, { foco: true });
+    });
+  });
+  function abrirServico(servico, { foco = false } = {}) {
     estado.servico = servico;
     perfil = "";
-    if (servico === "movel") { irAoPasso(2); definirOperacao(estado.operacao); }
-    else irAoPasso(3);
-    $("#c-passo" + passo).querySelector("h2")?.setAttribute("tabindex", "-1");
-    $("#c-passo" + passo).querySelector("h2")?.focus({ preventScroll: false });
+    abas.forEach((a) => {
+      const sel = a.dataset.servico === servico;
+      a.setAttribute("aria-selected", String(sel));
+      a.tabIndex = sel ? 0 : -1;
+      if (sel) { $("#painel-servico").setAttribute("aria-labelledby", a.id); if (foco) a.focus(); }
+    });
+    renderizar();
   }
+
+  // ---------- operação (portabilidade / CPF→CNPJ / linha nova) ----------
   function definirOperacao(op) {
     estado.operacao = op;
     const r = $(`input[name=operacao][value="${op}"]`);
     if (r) r.checked = true;
     $("#nota-operacao").textContent = NOTAS_OPERACAO[op];
+    renderizar();
   }
-  function voltar() {
-    if (passo === 3 && estado.servico === "movel") irAoPasso(2);
-    else { estado.servico = null; irAoPasso(1); }
-  }
-  $$("#servicos [data-servico]").forEach((b) => b.addEventListener("click", () => escolherServico(b.dataset.servico)));
   $$("input[name=operacao]").forEach((r) => r.addEventListener("change", () => definirOperacao(r.value)));
-  $("#c-continuar").addEventListener("click", () => irAoPasso(3));
-  $$("[data-c-voltar]").forEach((b) => b.addEventListener("click", voltar));
-
-  // Atalhos vindos de links antigos: já abre direto na lista de planos.
-  function irPara(servico, operacao) {
-    estado.servico = servico;
-    if (operacao) definirOperacao(operacao);
-    perfil = "";
-    irAoPasso(3);
-  }
-  function reiniciar() { estado.servico = null; irAoPasso(1); }
 
   // ---------- filtros ----------
   function atualizarFiltros() {
@@ -71,6 +58,8 @@ export function iniciarContratar(estado) {
     const mapa = { ordem: "#f-ordem", faixa: "#f-faixa", gb: "#f-gb", linhas: "#f-linhas" };
     for (const [k, sel] of Object.entries(mapa)) $(sel).closest("label").hidden = !ativos.includes(k);
     $("#mais-filtros").hidden = ativos.length === 0;
+    $("#operacoes").hidden = estado.servico !== "movel";
+    $("#nota-operacao").hidden = estado.servico !== "movel";
     const perfis = $("#perfis");
     perfis.hidden = !COM_PERFIL.includes(estado.servico);
     if (!perfis.hidden) {
@@ -143,7 +132,6 @@ export function iniciarContratar(estado) {
   }
 
   function renderizar() {
-    if (!estado.servico) return;
     atualizarFiltros();
     const base = porCategoria(catalogo, estado.servico);
     let lista = base;
@@ -156,12 +144,17 @@ export function iniciarContratar(estado) {
       });
       lista = ordenar(lista, $("#f-ordem").value);
     }
-    $("#c-resumo").textContent = estado.servico === "movel" ? `${ROTULO_SERVICO.movel} · ${ROTULO_OPERACAO[estado.operacao]}` : ROTULO_SERVICO[estado.servico];
-    $("#c-titulo-planos").textContent = estado.servico === "solucao" ? "Soluções complementares" : "Escolha o plano";
     $("#lista-planos").replaceChildren(...(lista.length ? lista.map(cartao) : [el("p", { classe: "vazio", texto: "Nenhum plano com esses filtros. Tente ampliar a faixa de preço ou a internet mínima." })]));
     $("#contagem").textContent = lista.length ? `${lista.length} ${lista.length === 1 ? "plano" : "planos"} em ${ROTULO_CATEGORIA[estado.servico].toLowerCase()}.` : "";
   }
 
-  irAoPasso(1);
-  return { irPara, reiniciar, renderizar };
+  // Atalhos vindos de links antigos (#portabilidade, #internet...).
+  function irPara(servico, operacao) {
+    if (operacao) { estado.operacao = operacao; const r = $(`input[name=operacao][value="${operacao}"]`); if (r) r.checked = true; $("#nota-operacao").textContent = NOTAS_OPERACAO[operacao]; }
+    abrirServico(servico);
+  }
+
+  $("#nota-operacao").textContent = NOTAS_OPERACAO[estado.operacao];
+  renderizar();
+  return { irPara, renderizar };
 }

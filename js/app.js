@@ -8,16 +8,15 @@ import { iniciarMenu, iniciarWhatsApp, iniciarCobertura, iniciarInstalacao } fro
 const raiz = document.documentElement.dataset.raiz || "";
 const consultor = JSON.parse($("#consultor-dados").textContent);
 
-const VISTAS = ["inicio", "contratar", "economizar", "comparar", "beneficios", "cobertura", "instalar", "duvidas"];
-// Links antigos usados nos disparos continuam funcionando.
+// Links antigos usados nos disparos continuam funcionando: escolhem o serviço e rolam até os planos.
 const LINKS_ANTIGOS = {
-  portabilidade: { vista: "contratar", servico: "movel", operacao: "portabilidade" },
-  transferencia: { vista: "contratar", servico: "movel", operacao: "transferencia" },
-  "linha-nova": { vista: "contratar", servico: "movel", operacao: "linha-nova" },
-  internet: { vista: "contratar", servico: "fibra" },
-  combo: { vista: "contratar", servico: "combo" },
-  escolha: { vista: "contratar" },
-  catalogo: { vista: "contratar" },
+  portabilidade: { servico: "movel", operacao: "portabilidade" },
+  transferencia: { servico: "movel", operacao: "transferencia" },
+  "linha-nova": { servico: "movel", operacao: "linha-nova" },
+  internet: { servico: "fibra" },
+  combo: { servico: "combo" },
+  escolha: {},
+  catalogo: {},
 };
 
 async function json(arquivo) {
@@ -26,43 +25,39 @@ async function json(arquivo) {
   return r.json();
 }
 
+// Cada seção aparece suavemente quando você chega nela. Sem JS, sem IntersectionObserver
+// ou com "reduzir movimento" ligado, tudo já fica visível desde o começo (a classe js-revela é ligada no <head>).
+function iniciarAparecer() {
+  if (!document.documentElement.classList.contains("js-revela")) return;   // ligado no <head>, antes do primeiro desenho
+  const alvos = $$(".secao .conteudo > *, .chamada .conteudo > *");
+  const obs = new IntersectionObserver((entradas) => {
+    for (const e of entradas) if (e.isIntersecting) { e.target.classList.add("visivel"); obs.unobserve(e.target); }
+  }, { threshold: 0.08, rootMargin: "0px 0px -6% 0px" });
+  alvos.forEach((x) => obs.observe(x));
+  // rede de segurança: se algo ficou escondido por qualquer motivo, mostra depois de alguns segundos
+  setTimeout(() => alvos.forEach((x) => x.classList.add("visivel")), 8000);
+}
+
+// Destaca no menu a seção que está na tela.
+function iniciarSecaoAtual() {
+  if (!("IntersectionObserver" in window)) return;
+  const links = new Map($$("#menu a[href^='#']").map((a) => [a.getAttribute("href").slice(1), a]));
+  const obs = new IntersectionObserver((entradas) => {
+    for (const e of entradas) {
+      const a = links.get(e.target.id);
+      if (!a) continue;
+      if (e.isIntersecting) { links.forEach((x) => x.removeAttribute("aria-current")); a.setAttribute("aria-current", "true"); }
+    }
+  }, { rootMargin: "-35% 0px -60% 0px" });
+  for (const id of links.keys()) { const s = document.getElementById(id); if (s) obs.observe(s); }
+}
+
 iniciarMenu();
 iniciarWhatsApp(consultor);
 iniciarCobertura(consultor);
 iniciarInstalacao(raiz);
 
-const estado = { consultor, vistaAtual: "inicio", temDepoimentos: false };
-
-function mostrarVista(nome, { foco }) {
-  estado.vistaAtual = nome;
-  for (const v of $$(".vista[data-vista]")) v.hidden = v.dataset.vista !== nome;
-  $("#depoimentos").hidden = !(nome === "inicio" && estado.temDepoimentos);
-  for (const a of $$("[data-vista-link]")) {
-    if (a.dataset.vistaLink === nome) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
-  }
-  estado.comparar?.atualizar();
-  if (foco) {
-    window.scrollTo(0, 0);
-    const h1 = $(`#v-${nome} h1`);
-    if (h1) { h1.setAttribute("tabindex", "-1"); h1.focus({ preventScroll: true }); }
-  }
-}
-
-let primeira = true;
-function rotear() {
-  const hash = decodeURIComponent(location.hash.replace("#", ""));
-  const antigo = LINKS_ANTIGOS[hash];
-  const foco = !primeira;
-  primeira = false;
-  if (antigo) {
-    mostrarVista(antigo.vista, { foco });
-    if (antigo.servico) estado.contratar?.irPara(antigo.servico, antigo.operacao);
-    else if (!estado.servico) estado.contratar?.reiniciar();
-    return;
-  }
-  mostrarVista(VISTAS.includes(hash) ? hash : "inicio", { foco });
-}
-
+const estado = { consultor, comparacaoVisivel: false, temDepoimentos: false };
 try {
   const [catalogo, beneficios, depoimentos] = await Promise.all([json("planos.json"), json("beneficios.json"), json("depoimentos.json")]);
   Object.assign(estado, { catalogo, beneficios, depoimentos });
@@ -71,12 +66,20 @@ try {
   iniciarEconomizar(estado);
   iniciarBeneficios(estado);
   iniciarDepoimentos(estado);
-  rotear();
-  addEventListener("hashchange", rotear);
-  document.documentElement.dataset.pronto = "1";
+  if (estado.temDepoimentos) $("#depoimentos").hidden = false;
+
+  const aplicarHashAntigo = () => {
+    const a = LINKS_ANTIGOS[decodeURIComponent(location.hash.replace("#", ""))];
+    if (!a) return;
+    if (a.servico) estado.contratar.irPara(a.servico, a.operacao);
+    $("#contratar").scrollIntoView();
+  };
+  aplicarHashAntigo();
+  addEventListener("hashchange", aplicarHashAntigo);
 } catch (erro) {
   console.error(erro);
   $("#lista-planos").textContent = "Não foi possível carregar os planos agora. Fale comigo pelo WhatsApp.";
-  rotear();
-  document.documentElement.dataset.pronto = "1";
 }
+iniciarAparecer();
+iniciarSecaoAtual();
+document.documentElement.dataset.pronto = "1";

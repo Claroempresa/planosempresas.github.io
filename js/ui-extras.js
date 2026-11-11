@@ -48,8 +48,8 @@ export function iniciarCobertura(consultor) {
 export function iniciarInstalacao(raiz) {
   const standalone = matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
   if (standalone) {
-    $("#v-instalar").remove();
-    $$('[data-vista-link="instalar"]').forEach((a) => (a.hidden = true));
+    $("#instalar").remove();
+    $$('a[href="#instalar"]').forEach((a) => (a.hidden = true));
     return;
   }
   const ua = navigator.userAgent || "";
@@ -57,7 +57,7 @@ export function iniciarInstalacao(raiz) {
   const noutro = /FBAN|FBAV|Instagram|WhatsApp|Line\/|; wv\)/i.test(ua);
   $("#aviso-navegador").hidden = !noutro;
 
-  const abas = $$("#v-instalar [role=tab]");
+  const abas = $$("#instalar [role=tab]");
   function mostrar(so) {
     abas.forEach((a) => { const s = a.dataset.so === so; a.setAttribute("aria-selected", String(s)); a.tabIndex = s ? 0 : -1; });
     $("#passos-android").hidden = so !== "android";

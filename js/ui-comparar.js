@@ -51,18 +51,22 @@ export function iniciarComparar(estado) {
 
   function atualizar() {
     const sel = estado.comparados;
-    $("#bandeja").hidden = sel.length === 0 || estado.vistaAtual === "comparar";
+    $("#bandeja").hidden = sel.length === 0 || estado.comparacaoVisivel === true || estado.contratarVisivel === false;
     $("#bandeja-n").textContent = String(sel.length);
     $("#bandeja-txt").textContent = sel.length === 1 ? "plano selecionado (escolha mais 1 ou 2)" : "planos selecionados";
     $("#bandeja-ver").hidden = sel.length < 2;
 
     const caixa = $("#comparacao");
     if (sel.length === 0) {
-      caixa.replaceChildren(el("p", { classe: "vazio", texto: "Nenhum plano selecionado ainda. Em “Contratar”, marque “Comparar” em dois ou três planos da mesma categoria." }));
+      caixa.replaceChildren(el("p", { classe: "vazio", texto: "Nenhum plano selecionado ainda. Marque “Comparar” em dois ou três planos da mesma categoria, na seção Contratar." }));
       return;
     }
+    const botaoLimpar = () => el("button", { type: "button", id: "comparar-limpar", classe: "botao botao--contorno botao--pequeno", texto: "Limpar comparação", onclick: limpar });
     if (sel.length === 1) {
-      caixa.replaceChildren(el("p", { classe: "vazio", texto: `Você escolheu ${sel[0].nome}. Marque mais um ou dois planos de ${ROTULO_CATEGORIA[sel[0].categoria].toLowerCase()} para comparar (até ${MAX_COMPARAR}).` }));
+      caixa.replaceChildren(
+        el("p", { classe: "vazio", texto: `Você escolheu ${sel[0].nome}. Marque mais um ou dois planos de ${ROTULO_CATEGORIA[sel[0].categoria].toLowerCase()} para comparar (até ${MAX_COMPARAR}).` }),
+        el("div", { classe: "acoes" }, [botaoLimpar()])
+      );
       return;
     }
     const linhasTab = linhasDaComparacao(sel, nomeBeneficio);
@@ -77,11 +81,19 @@ export function iniciarComparar(estado) {
       el("div", { classe: "rolagem", tabindex: "0", role: "region", "aria-label": "Tabela de comparação, role para os lados se necessário" }, [tabela]),
       el("ul", { classe: "recomendacoes", "aria-label": "Quem vence em cada critério" }, rec.map((r) => el("li", {}, [el("strong", { texto: r.criterio }), r.explicacao]))),
       el("p", { classe: "nota", texto: "Cada indicação segue um critério só. Não existe plano “melhor” para todo mundo: depende do seu uso." }),
-      el("div", { classe: "acoes-passo" }, [el("a", { classe: "botao botao--whats", target: "_blank", rel: "noopener", href: linkWhats(consultor.whatsapp, msgComparacao(consultor, sel)) }, [icone("i-whats"), "Pedir ajuda para escolher"])])
+      el("div", { classe: "acoes" }, [
+        el("a", { classe: "botao botao--whats", target: "_blank", rel: "noopener", href: linkWhats(consultor.whatsapp, msgComparacao(consultor, sel)) }, [icone("i-whats"), "Pedir ajuda para escolher"]),
+        botaoLimpar(),
+      ])
     );
   }
 
   $("#bandeja-limpar").addEventListener("click", limpar);
+  if ("IntersectionObserver" in window) {
+    // a bandeja só aparece enquanto você escolhe planos (seção Contratar) e some quando a comparação já está na tela
+    new IntersectionObserver(([e]) => { estado.comparacaoVisivel = e.isIntersecting; atualizar(); }, { threshold: 0.25 }).observe($("#comparar"));
+    new IntersectionObserver(([e]) => { estado.contratarVisivel = e.isIntersecting; atualizar(); }, { threshold: 0.05 }).observe($("#contratar"));
+  }
   atualizar();
   return { alternar, atualizar, marcarCartoes };
 }
