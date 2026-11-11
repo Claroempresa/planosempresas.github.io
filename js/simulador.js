@@ -74,3 +74,22 @@ export function simular(catalogo, entrada) {
     p24: periodo(24),
   };
 }
+
+// O prazo da promoção da internet (600 Mega) muda conforme a região: 0, 3 ou 6 meses.
+// Por isso a simulação mostra o pior caso (sem promoção) e o melhor caso (6 meses).
+function comMesesDePromocao(catalogo, meses) {
+  return catalogo.map((p) => (p.promocao && p.promocaoVariavel ? { ...p, promocao: { ...p.promocao, meses } } : p));
+}
+
+export function simularFaixa(catalogo, entrada) {
+  const base = simular(catalogo, entrada);
+  const variavel = base.itens.some((i) => catalogo.find((p) => p.id === i.id)?.promocaoVariavel);
+  if (!variavel) return { variavel: false, pior: base, melhor: base, base };
+  const { minMeses, maxMeses } = { minMeses: 0, maxMeses: 6 };
+  return {
+    variavel: true,
+    pior: simular(comMesesDePromocao(catalogo, minMeses), entrada),
+    melhor: simular(comMesesDePromocao(catalogo, maxMeses), entrada),
+    base,
+  };
+}

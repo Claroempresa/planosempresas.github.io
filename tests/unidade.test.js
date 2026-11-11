@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { simular, ErroSimulacao } from "../js/simulador.js";
+import { simular, simularFaixa, ErroSimulacao } from "../js/simulador.js";
 import { precoNoMes } from "../js/catalogo.js";
 import { brl, lerValor, mascaraCep, cepValido, emCentavos } from "../js/formatar.js";
 import { podeAdicionar, linhasDaComparacao, recomendacoes } from "../js/comparador.js";
@@ -124,14 +124,36 @@ test("comparador: marca as linhas que diferem", () => {
 test("mensagens de WhatsApp levam o contexto certo", () => {
   assert.match(msgPlano(consultor, por("pos-80"), "portabilidade"), /portabilidade para o plano Claro Pós 80GB – R\$ 54,99/);
   assert.match(msgPlano(consultor, por("pos-20"), "transferencia"), /do CPF para o CNPJ/);
-  assert.match(msgPlano(consultor, por("fibra-600")), /R\$ 59,90 por 3 meses/);
+  assert.match(msgPlano(consultor, por("fibra-600")), /R\$ 59,90 por até 6 meses/);
   assert.match(msgPlano(consultor, por("combo-600-80")), /CEP da empresa/);
-  const sim = simular(catalogo, { linhas: 2, valorAtualMensal: 300, planoId: "pos-80" });
-  const txt = msgSimulacao(consultor, { sim, periodo: sim.p24, planoNome: "Claro Pós 80GB", linhas: 2, manterNumeros: true, migrarCnpj: true, fibraNome: "", operadora: "Vivo" });
+  const faixa = simularFaixa(catalogo, { linhas: 2, valorAtualMensal: 300, planoId: "pos-80" });
+  const txt = msgSimulacao(consultor, { faixa, meses: 24, planoNome: "Claro Pós 80GB", linhas: 2, manterNumeros: true, migrarCnpj: true, fibraNome: "", operadora: "Vivo" });
   assert.match(txt, /Linhas: 2/);
   assert.match(txt, /Hoje pago: R\$ 300,00 por mês \(Vivo\)/);
-  assert.match(txt, /Economia estimada em 24 meses: R\$ 4\.560,48/);
+  assert.match(txt, /Estimativa em 24 meses: economia de R\$ 4\.560,48\./);
   assert.match(txt, /manter os números, migrar da titularidade CPF para CNPJ/);
   assert.match(msgCobertura(consultor, { cep: "84010-123", numero: "10", complemento: "sala 2" }), /CEP: 84010-123/);
   assert.ok(linkWhats("554298484317", "oi").startsWith("https://wa.me/554298484317?text="));
+});
+
+test("promoção da internet varia por região: faixa de 0 a 6 meses", () => {
+  const f = simularFaixa(catalogo, { linhas: 1, valorAtualMensal: 150, planoId: "pos-20", fibraId: "fibra-600" });
+  assert.equal(f.variavel, true);
+  // pior caso: sem promoção, 124,89 todos os meses  -> 3.600,00 - 2.997,36
+  assert.equal(f.pior.p24.custoClaro, 24 * 12489);
+  assert.equal(f.pior.p24.economia, 60264);
+  // melhor caso: 6 meses a 94,89 e o resto a 124,89 -> 3.600,00 - 2.817,36
+  assert.equal(f.melhor.p24.custoClaro, 6 * 9489 + 18 * 12489);
+  assert.equal(f.melhor.p24.economia, 78264);
+  assert.ok(f.pior.p24.economia < f.melhor.p24.economia);
+  assert.equal(f.melhor.mesesDePromocao, 6);
+  assert.equal(f.pior.temPromocao, false);
+  // sem promoção variável (celular, ou fibra 800) a faixa é um valor só
+  assert.equal(simularFaixa(catalogo, { linhas: 3, valorAtualMensal: 400, planoId: "pos-80" }).variavel, false);
+  assert.equal(simularFaixa(catalogo, { linhas: 1, valorAtualMensal: 300, planoId: "pos-80", fibraId: "fibra-800" }).variavel, false);
+});
+
+test("só o 600 Mega tem promoção variável", () => {
+  const variaveis = catalogo.filter((p) => p.promocaoVariavel).map((p) => p.id).sort();
+  assert.deepEqual(variaveis, ["combo-600-100", "combo-600-150", "combo-600-20", "combo-600-30", "combo-600-80", "fibra-600"]);
 });

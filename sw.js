@@ -1,6 +1,6 @@
 // Service worker do site. Guarda uma cópia para abrir mais rápido e funcionar com internet fraca.
 // Nunca guarda o vídeo. A versão muda sozinha quando o site muda.
-const VERSAO = "claro-01d1d005";
+const VERSAO = "claro-bb74bdeb";
 
 self.addEventListener("install", () => self.skipWaiting());
 

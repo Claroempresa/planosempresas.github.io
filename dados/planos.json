@@ -208,7 +208,11 @@
   "restricoes": "Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
   "grupoMercado": "Grandes mercados",
   "dataReferencia": "2026-11",
-  "selo": "Oferta"
+  "selo": "Oferta",
+  "promocaoVariavel": {
+   "minMeses": 0,
+   "maxMeses": 6
+  }
  },
  {
   "id": "fibra-800",
@@ -299,7 +303,11 @@
   "restricoes": "Internet fibra + 1 linha Claro Pós. Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
   "grupoMercado": "Grandes mercados",
   "dataReferencia": "2026-11",
-  "selo": "Black Friday"
+  "selo": "Black Friday",
+  "promocaoVariavel": {
+   "minMeses": 0,
+   "maxMeses": 6
+  }
  },
  {
   "id": "combo-600-30",
@@ -340,7 +348,11 @@
   "restricoes": "Internet fibra + 1 linha Claro Pós. Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
   "grupoMercado": "Grandes mercados",
   "dataReferencia": "2026-11",
-  "selo": "Black Friday"
+  "selo": "Black Friday",
+  "promocaoVariavel": {
+   "minMeses": 0,
+   "maxMeses": 6
+  }
  },
  {
   "id": "combo-600-80",
@@ -381,7 +393,11 @@
   "restricoes": "Internet fibra + 1 linha Claro Pós. Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
   "grupoMercado": "Grandes mercados",
   "dataReferencia": "2026-11",
-  "selo": "Black Friday"
+  "selo": "Black Friday",
+  "promocaoVariavel": {
+   "minMeses": 0,
+   "maxMeses": 6
+  }
  },
  {
   "id": "combo-600-100",
@@ -423,7 +439,11 @@
   "restricoes": "Internet fibra + 1 linha Claro Pós. Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
   "grupoMercado": "Grandes mercados",
   "dataReferencia": "2026-11",
-  "selo": "Black Friday"
+  "selo": "Black Friday",
+  "promocaoVariavel": {
+   "minMeses": 0,
+   "maxMeses": 6
+  }
  },
  {
   "id": "combo-600-150",
@@ -466,7 +486,11 @@
   "restricoes": "Internet fibra + 1 linha Claro Pós. Exclusivo para CNPJ. Sujeito à disponibilidade no endereço e à análise de elegibilidade.",
   "grupoMercado": "Grandes mercados",
   "dataReferencia": "2026-11",
-  "selo": "Black Friday"
+  "selo": "Black Friday",
+  "promocaoVariavel": {
+   "minMeses": 0,
+   "maxMeses": 6
+  }
  },
  {
   "id": "combo-800-20",

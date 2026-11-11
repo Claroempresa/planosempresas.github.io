@@ -248,6 +248,10 @@
   "fonte": {
    "documento": "Book Claro Empresas Nov/2026",
    "pagina": 30
+  },
+  "promocaoVariavel": {
+   "minMeses": 0,
+   "maxMeses": 6
   }
  },
  {
@@ -354,6 +358,10 @@
   "fonte": {
    "documento": "Book Claro Empresas Nov/2026",
    "pagina": 13
+  },
+  "promocaoVariavel": {
+   "minMeses": 0,
+   "maxMeses": 6
   }
  },
  {
@@ -400,6 +408,10 @@
   "fonte": {
    "documento": "Book Claro Empresas Nov/2026",
    "pagina": 13
+  },
+  "promocaoVariavel": {
+   "minMeses": 0,
+   "maxMeses": 6
   }
  },
  {
@@ -446,6 +458,10 @@
   "fonte": {
    "documento": "Book Claro Empresas Nov/2026",
    "pagina": 13
+  },
+  "promocaoVariavel": {
+   "minMeses": 0,
+   "maxMeses": 6
   }
  },
  {
@@ -493,6 +509,10 @@
   "fonte": {
    "documento": "Book Claro Empresas Nov/2026",
    "pagina": 13
+  },
+  "promocaoVariavel": {
+   "minMeses": 0,
+   "maxMeses": 6
   }
  },
  {
@@ -541,6 +561,10 @@
   "fonte": {
    "documento": "Book Claro Empresas Nov/2026",
    "pagina": 13
+  },
+  "promocaoVariavel": {
+   "minMeses": 0,
+   "maxMeses": 6
   }
  },
  {

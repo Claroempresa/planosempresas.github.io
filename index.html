@@ -30,11 +30,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/app.css?v=01d1d005">
+  <link rel="stylesheet" href="css/app.css?v=bb74bdeb">
 
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": "Claro Empresas | Consultoria", "url": "https://claroempresa.github.io/planosempresas.github.io/", "inLanguage": "pt-BR"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Vou perder meu número na portabilidade?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Na portabilidade você continua com o mesmo número, só muda a operadora para a Claro."}}, {"@type": "Question", "name": "Qual a diferença entre portabilidade e transferência de CPF para CNPJ?", "acceptedAnswer": {"@type": "Answer", "text": "Na portabilidade você traz o número de outra operadora para a Claro. Na transferência de titularidade a linha já é Claro e passa do seu CPF para o CNPJ da empresa, mantendo o número. Cada caso passa por análise de elegibilidade."}}, {"@type": "Question", "name": "Posso passar minha linha do CPF para o CNPJ?", "acceptedAnswer": {"@type": "Answer", "text": "Em geral sim, sujeito à análise. Eu te passo a lista de documentos e acompanho a transferência. Você continua com o mesmo número, agora no plano da empresa."}}, {"@type": "Question", "name": "Sou MEI. Posso contratar os planos para empresas?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. O MEI tem CNPJ e pode contratar os planos Claro Pós para empresas, sujeito à análise de crédito."}}, {"@type": "Question", "name": "Os planos têm fidelidade?", "acceptedAnswer": {"@type": "Answer", "text": "Sim, a fidelidade é de 24 meses. Isso garante que o valor do seu plano fique o mesmo, sem aumentar. Nas ofertas com desconto nos primeiros meses, o valor promocional vale pelo período indicado no plano."}}, {"@type": "Question", "name": "O que é o bônus de internet?", "acceptedAnswer": {"@type": "Answer", "text": "É uma franquia extra de uso livre que soma à franquia do plano. Por exemplo, o Claro Pós 80GB tem 25GB do plano e 55GB de bônus. Já o Mega Bônus de 50GB vem nos combos de fibra com Claro Pós e pode ser compartilhado entre as linhas."}}, {"@type": "Question", "name": "A internet Wi-Fi está disponível no meu endereço?", "acceptedAnswer": {"@type": "Answer", "text": "Depende da cobertura da Claro na sua região. Use o campo de cobertura desta página ou me mande o CEP da empresa pelo WhatsApp que eu consulto para você."}}, {"@type": "Question", "name": "Como funciona a análise gratuita?", "acceptedAnswer": {"@type": "Answer", "text": "Você me informa quanto paga hoje e quantas linhas tem, ou envia a foto da fatura pelo WhatsApp. Eu comparo com os planos Claro e mostro a diferença. Não tem custo nem compromisso."}}, {"@type": "Question", "name": "Como contrato?", "acceptedAnswer": {"@type": "Answer", "text": "Escolha o plano e fale comigo pelo WhatsApp. Eu faço o cadastro, te passo os documentos necessários e acompanho até a linha ou a internet funcionar."}}, {"@type": "Question", "name": "Como é o atendimento?", "acceptedAnswer": {"@type": "Answer", "text": "Você é atendido diretamente por um consultor de Revenda Autorizada Claro pelo WhatsApp. Para internet fibra, a Claro também tem a central exclusiva de empresas, o 10621."}}]}]}</script>
   <script id="consultor-dados" type="application/json">{"nome": "Evelyn Hartmann", "primeiroNome": "Evelyn", "whatsapp": "5542998242620", "whatsappExibicao": "(42) 99824-2620"}</script>
-  <script type="module" src="js/app.js?v=01d1d005"></script>
+  <script type="module" src="js/app.js?v=bb74bdeb"></script>
 </head>
 <body>
   <!-- Ícones usados no site -->
@@ -72,13 +72,14 @@
         <img src="claro-revenda.png" alt="Claro Revenda Autorizada" width="150" height="31">
       </a>
       <nav class="topo__nav" id="menu" aria-label="Seções do site">
-        <a href="#contratar">Contratar</a>
-        <a href="#comparar">Comparar</a>
-        <a href="#economizar">Economizar</a>
-        <a href="#beneficios">Benefícios</a>
-        <a href="#cobertura">Cobertura</a>
-        <a href="#instalar">Instalar app</a>
-        <a href="#duvidas">Dúvidas</a>
+        <a href="#inicio" data-vista-link="inicio">Início</a>
+        <a href="#contratar" data-vista-link="contratar">Contratar</a>
+        <a href="#economizar" data-vista-link="economizar">Economizar</a>
+        <a href="#comparar" data-vista-link="comparar">Comparar</a>
+        <a href="#beneficios" data-vista-link="beneficios">Benefícios</a>
+        <a href="#cobertura" data-vista-link="cobertura">Cobertura</a>
+        <a href="#duvidas" data-vista-link="duvidas">Dúvidas</a>
+        <a class="topo__extra" href="#instalar" data-vista-link="instalar">Instalar app</a>
       </nav>
       <a class="botao botao--branco botao--pequeno" data-whats="geral" href="https://wa.me/5542998242620?text=Ol%C3%A1%2C%20Evelyn%21%20Vim%20pelo%20site%20e%20quero%20falar%20sobre%20os%20planos%20Claro." target="_blank" rel="noopener" aria-label="Falar com Evelyn no WhatsApp">
         <svg aria-hidden="true"><use href="#i-whats"/></svg><span aria-hidden="true">WhatsApp</span>
@@ -90,220 +91,262 @@
   </header>
 
   <main id="principal">
-    <!-- ===== INÍCIO: DUAS JORNADAS ===== -->
-    <section class="destaque" id="inicio" aria-labelledby="t-inicio">
-      <div class="conteudo">
-        <p class="destaque__aviso">Atendimento por consultores de Revenda Autorizada Claro</p>
-        <h1 id="t-inicio">Planos Claro para a sua empresa</h1>
-        <p class="destaque__sub">Celular, portabilidade, internet fibra e combos para CNPJ e MEI, com simulação de economia e atendimento direto pelo WhatsApp.</p>
 
-        <div class="jornadas">
-          <a class="jornada" href="#contratar">
-            <span class="jornada__icone" aria-hidden="true"><svg><use href="#i-empresa"/></svg></span>
-            <span class="jornada__texto">
-              <strong>Quero contratar Claro Empresas</strong>
-              <small>Celular, portabilidade, linha nova, internet fibra e combos</small>
-            </span>
-            <svg class="jornada__seta" aria-hidden="true"><use href="#i-seta"/></svg>
-          </a>
-          <a class="jornada" href="#economizar">
-            <span class="jornada__icone" aria-hidden="true"><svg><use href="#i-calc"/></svg></span>
-            <span class="jornada__texto">
-              <strong>Quero economizar ou migrar para CNPJ</strong>
-              <small>Simule quanto você economiza em 12 e 24 meses</small>
-            </span>
-            <svg class="jornada__seta" aria-hidden="true"><use href="#i-seta"/></svg>
-          </a>
+    <!-- ================= INÍCIO ================= -->
+    <section class="vista" id="v-inicio" data-vista="inicio" aria-labelledby="t-inicio">
+      <div class="heroi">
+        <div class="conteudo">
+          <p class="heroi__etiqueta">Revenda Autorizada Claro</p>
+          <h1 id="t-inicio" tabindex="-1">Planos Claro para a sua empresa</h1>
+          <p class="heroi__sub">Celular, internet fibra e combos para CNPJ e MEI, com atendimento direto pelo WhatsApp.</p>
+
+          <div class="jornadas">
+            <a class="jornada" href="#contratar">
+              <span class="jornada__icone" aria-hidden="true"><svg><use href="#i-empresa"/></svg></span>
+              <span class="jornada__texto"><strong>Quero contratar</strong><small>Celular, internet fibra e combos</small></span>
+              <svg class="jornada__seta" aria-hidden="true"><use href="#i-seta"/></svg>
+            </a>
+            <a class="jornada" href="#economizar">
+              <span class="jornada__icone" aria-hidden="true"><svg><use href="#i-calc"/></svg></span>
+              <span class="jornada__texto"><strong>Quero economizar</strong><small>Ver quanto economizo ou migrar para CNPJ</small></span>
+              <svg class="jornada__seta" aria-hidden="true"><use href="#i-seta"/></svg>
+            </a>
+          </div>
+
+          <div class="consultora">
+            <img src="retrato.jpg" alt="Foto de Evelyn Hartmann" width="56" height="56">
+            <p>Sua consultora<strong>Evelyn Hartmann</strong><a data-whats="geral" href="https://wa.me/5542998242620?text=Ol%C3%A1%2C%20Evelyn%21%20Vim%20pelo%20site%20e%20quero%20falar%20sobre%20os%20planos%20Claro." target="_blank" rel="noopener">WhatsApp (42) 99824-2620</a></p>
+          </div>
         </div>
-
-        <ul class="garantias">
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Revenda Autorizada Claro</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Análise da sua conta grátis e sem compromisso</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Você pode continuar com o mesmo número</li>
-        </ul>
       </div>
-    </section>
 
-    <div class="conteudo">
-      <div class="consultora">
-        <img src="retrato.jpg" alt="Foto de Evelyn Hartmann" width="64" height="64">
-        <p>Sua consultora<strong>Evelyn Hartmann</strong>Revenda Autorizada Claro · WhatsApp <a data-whats="geral" href="https://wa.me/5542998242620?text=Ol%C3%A1%2C%20Evelyn%21%20Vim%20pelo%20site%20e%20quero%20falar%20sobre%20os%20planos%20Claro." target="_blank" rel="noopener">(42) 99824-2620</a></p>
+      <div class="conteudo atalhos">
+        <a class="atalho" href="#comparar">
+          <span class="atalho__icone" aria-hidden="true"><svg><use href="#i-troca"/></svg></span>
+          <strong>Comparar planos</strong>
+          <span>Coloque até 3 planos lado a lado.</span>
+          <span class="atalho__ir">Comparar <svg aria-hidden="true"><use href="#i-seta"/></svg></span>
+        </a>
+        <a class="atalho" href="#beneficios">
+          <span class="atalho__icone" aria-hidden="true"><svg><use href="#i-presente"/></svg></span>
+          <strong>Benefícios</strong>
+          <span>O que vem incluso e quais são os descontos.</span>
+          <span class="atalho__ir">Ver benefícios <svg aria-hidden="true"><use href="#i-seta"/></svg></span>
+        </a>
+        <a class="atalho" href="#cobertura">
+          <span class="atalho__icone" aria-hidden="true"><svg><use href="#i-pin"/></svg></span>
+          <strong>Cobertura</strong>
+          <span>Veja se a fibra chega ao seu endereço.</span>
+          <span class="atalho__ir">Consultar <svg aria-hidden="true"><use href="#i-seta"/></svg></span>
+        </a>
       </div>
 
       <noscript>
-        <div class="aviso">
-          <p><strong>Ative o JavaScript para usar o comparador e o simulador.</strong> Enquanto isso, estes são os planos Claro Pós para empresas (valor por linha, por mês):</p>
+        <div class="conteudo"><div class="aviso">
+          <p><strong>Ative o JavaScript para usar o comparador e o simulador.</strong> Planos Claro Pós para empresas (valor por linha, por mês):</p>
           <ul><li>Claro Pós 20GB: R$ 34,99/mês por linha</li><li>Claro Pós 30GB: R$ 44,99/mês por linha</li><li>Claro Pós 80GB: R$ 54,99/mês por linha</li><li>Claro Pós 70GB: R$ 74,99/mês por linha</li><li>Claro Pós 100GB: R$ 89,99/mês por linha</li><li>Claro Pós 150GB: R$ 149,99/mês por linha</li></ul>
           <p><a href="https://wa.me/5542998242620?text=Ol%C3%A1%2C%20Evelyn%21%20Vim%20pelo%20site%20e%20quero%20falar%20sobre%20os%20planos%20Claro.">Falar no WhatsApp</a></p>
-        </div>
+        </div></div>
       </noscript>
+    </section>
 
-      <!-- ===== JORNADA A: CONTRATAR ===== -->
-      <section class="secao" id="contratar" aria-labelledby="t-contratar">
-        <p class="rotulo">Jornada A</p>
-        <h2 id="t-contratar">Contratar Claro Empresas</h2>
-        <p class="intro">Escolha o serviço, veja os planos, compare e fale comigo pelo WhatsApp.</p>
+    <!-- ================= CONTRATAR (passo a passo) ================= -->
+    <section class="vista" id="v-contratar" data-vista="contratar" aria-labelledby="t-contratar" hidden>
+      <div class="conteudo">
+        <header class="vista__topo">
+          <a class="voltar" href="#inicio">&larr; Início</a>
+          <h1 id="t-contratar" tabindex="-1">Contratar Claro Empresas</h1>
+        </header>
+        <div class="progresso" aria-hidden="true"><span id="c-barra"></span></div>
+        <p class="progresso__texto" id="c-passo-texto" aria-live="polite"></p>
 
-        <div class="servicos" role="tablist" aria-label="Tipo de serviço" id="servicos">
-          <button role="tab" id="aba-movel" aria-controls="painel-servico" aria-selected="true" data-servico="movel" type="button">
-            <svg aria-hidden="true"><use href="#i-celular"/></svg><span>Celular</span><small>Claro Pós</small>
-          </button>
-          <button role="tab" id="aba-fibra" aria-controls="painel-servico" aria-selected="false" data-servico="fibra" tabindex="-1" type="button">
-            <svg aria-hidden="true"><use href="#i-wifi"/></svg><span>Internet fibra</span><small>Wi-Fi para empresa</small>
-          </button>
-          <button role="tab" id="aba-combo" aria-controls="painel-servico" aria-selected="false" data-servico="combo" tabindex="-1" type="button">
-            <svg aria-hidden="true"><use href="#i-presente"/></svg><span>Combos</span><small>Fibra + celular</small>
-          </button>
-          <button role="tab" id="aba-solucao" aria-controls="painel-servico" aria-selected="false" data-servico="solucao" tabindex="-1" type="button">
-            <svg aria-hidden="true"><use href="#i-engrenagem"/></svg><span>Soluções</span><small>Complementares</small>
-          </button>
+        <div class="passo" id="c-passo1">
+          <h2>O que você quer contratar?</h2>
+          <div class="opcoes-grandes" id="servicos">
+            <button type="button" class="opcao-grande" data-servico="movel"><svg aria-hidden="true"><use href="#i-celular"/></svg><span><strong>Celular</strong><small>Planos Claro Pós</small></span></button>
+            <button type="button" class="opcao-grande" data-servico="fibra"><svg aria-hidden="true"><use href="#i-wifi"/></svg><span><strong>Internet fibra</strong><small>Wi-Fi para a empresa</small></span></button>
+            <button type="button" class="opcao-grande" data-servico="combo"><svg aria-hidden="true"><use href="#i-presente"/></svg><span><strong>Combo</strong><small>Fibra + celular</small></span></button>
+            <button type="button" class="opcao-grande" data-servico="solucao"><svg aria-hidden="true"><use href="#i-engrenagem"/></svg><span><strong>Soluções</strong><small>Microsoft 365, gestão e proteção</small></span></button>
+          </div>
         </div>
 
-        <div id="painel-servico" role="tabpanel" aria-labelledby="aba-movel" tabindex="-1">
-          <fieldset class="operacoes" id="operacoes">
-            <legend>O que você quer fazer com a linha?</legend>
-            <label><input type="radio" name="operacao" value="portabilidade" checked><span><strong>Portabilidade</strong><small>Trazer o número de outra operadora</small></span></label>
+        <div class="passo" id="c-passo2" hidden>
+          <h2>O que você quer fazer com a linha?</h2>
+          <fieldset class="escolhas" id="operacoes">
+            <legend class="so-leitor">Tipo de operação</legend>
+            <label><input type="radio" name="operacao" value="portabilidade" checked><span><strong>Portabilidade</strong><small>Trazer meu número de outra operadora</small></span></label>
             <label><input type="radio" name="operacao" value="transferencia"><span><strong>CPF para CNPJ</strong><small>Passar uma linha Claro para a empresa</small></span></label>
             <label><input type="radio" name="operacao" value="linha-nova"><span><strong>Linha nova</strong><small>Contratar uma linha no CNPJ</small></span></label>
           </fieldset>
           <p class="nota" id="nota-operacao"></p>
+          <div class="acoes-passo">
+            <button type="button" class="botao botao--contorno" data-c-voltar>Voltar</button>
+            <button type="button" class="botao botao--primario" id="c-continuar">Ver os planos</button>
+          </div>
+        </div>
 
-          <form class="filtros" id="filtros" aria-label="Filtros dos planos" onsubmit="return false">
-            <label>Ordenar por
-              <select id="f-ordem">
-                <option value="preco">Menor preço</option>
-                <option value="internet">Mais internet</option>
-              </select>
-            </label>
-            <label>Faixa de preço
-              <select id="f-faixa">
-                <option value="todas">Todas</option>
-                <option value="ate50">Até R$ 50</option>
-                <option value="de50a100">De R$ 50 a R$ 100</option>
-                <option value="acima100">Acima de R$ 100</option>
-              </select>
-            </label>
-            <label>Internet mínima
-              <select id="f-gb">
-                <option value="0">Qualquer</option>
-                <option value="30">30GB ou mais</option>
-                <option value="70">70GB ou mais</option>
-                <option value="100">100GB ou mais</option>
-              </select>
-            </label>
-            <label>Perfil de uso
-              <select id="f-perfil"><option value="">Qualquer</option></select>
-            </label>
-            <label id="rotulo-linhas">Quantidade de linhas
-              <input id="f-linhas" type="number" min="1" max="500" value="1" inputmode="numeric">
-            </label>
-          </form>
+        <div class="passo" id="c-passo3" hidden>
+          <div class="escolha-resumo">
+            <p id="c-resumo"></p>
+            <button type="button" class="link-botao" data-c-voltar>Alterar</button>
+          </div>
+          <h2 id="c-titulo-planos">Escolha o plano</h2>
+
+          <details class="mais" id="mais-filtros">
+            <summary>Filtrar planos</summary>
+            <div class="perfis" id="perfis" role="group" aria-label="Perfil de uso"></div>
+            <form class="filtros" id="filtros" onsubmit="return false">
+              <label>Ordenar por
+                <select id="f-ordem"><option value="preco">Menor preço</option><option value="internet">Mais internet</option></select>
+              </label>
+              <label>Faixa de preço
+                <select id="f-faixa"><option value="todas">Todas</option><option value="ate50">Até R$ 50</option><option value="de50a100">De R$ 50 a R$ 100</option><option value="acima100">Acima de R$ 100</option></select>
+              </label>
+              <label>Internet mínima
+                <select id="f-gb"><option value="0">Qualquer</option><option value="30">30GB ou mais</option><option value="70">70GB ou mais</option><option value="100">100GB ou mais</option></select>
+              </label>
+              <label>Quantidade de linhas
+                <input id="f-linhas" type="number" min="1" max="500" value="1" inputmode="numeric">
+              </label>
+            </form>
+          </details>
           <p class="contagem" id="contagem" aria-live="polite"></p>
           <div class="cartoes" id="lista-planos"></div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- ===== COMPARADOR ===== -->
-      <section class="secao" id="comparar" aria-labelledby="t-comparar">
-        <p class="rotulo">Comparador</p>
-        <h2 id="t-comparar">Compare até 3 planos</h2>
-        <p class="intro">Marque “Comparar” nos planos acima. As diferenças ficam destacadas.</p>
-        <p class="aviso aviso--atencao" id="aviso-comparar" role="status" hidden></p>
-        <div id="comparacao"><p class="vazio">Nenhum plano selecionado ainda. Marque “Comparar” em dois ou três planos da mesma categoria.</p></div>
-      </section>
+    <!-- ================= ECONOMIZAR (passo a passo) ================= -->
+    <section class="vista" id="v-economizar" data-vista="economizar" aria-labelledby="t-economizar" hidden>
+      <div class="conteudo conteudo--estreito">
+        <header class="vista__topo">
+          <a class="voltar" href="#inicio">&larr; Início</a>
+          <h1 id="t-economizar" tabindex="-1">Economizar ou migrar para CNPJ</h1>
+        </header>
+        <div class="progresso" aria-hidden="true"><span id="e-barra"></span></div>
+        <p class="progresso__texto" id="e-passo-texto" aria-live="polite"></p>
 
-      <!-- ===== JORNADA B: ECONOMIZAR ===== -->
-      <section class="secao" id="economizar" aria-labelledby="t-economizar">
-        <p class="rotulo">Jornada B</p>
-        <h2 id="t-economizar">Economizar ou migrar para CNPJ</h2>
-        <p class="intro">Conte como é a sua situação hoje. A conta soma o valor de cada mês, inclusive os meses de promoção.</p>
+        <form id="simulador" novalidate>
+          <div class="passo" id="e-passo1">
+            <h2>Como é a sua situação hoje?</h2>
+            <div class="campos">
+              <div class="campo">
+                <label for="s-linhas">Quantas linhas você tem?</label>
+                <input id="s-linhas" type="number" min="1" max="500" value="1" inputmode="numeric" required>
+              </div>
+              <div class="campo">
+                <label for="s-valor">Quanto você paga por mês hoje? (R$)</label>
+                <input id="s-valor" type="text" inputmode="decimal" placeholder="Ex.: 350,00" autocomplete="off" required>
+                <small>Some todas as linhas e, se for trocar, a internet.</small>
+              </div>
+              <div class="campo">
+                <label for="s-operadora">Operadora atual <span class="opcional">(opcional)</span></label>
+                <select id="s-operadora"><option value="">Prefiro não informar</option><option>Vivo</option><option>TIM</option><option>Claro (CPF)</option><option>Oi</option><option>Outra</option></select>
+              </div>
+              <fieldset class="campo campo--lista">
+                <legend>Tenho interesse em</legend>
+                <label><input type="checkbox" id="s-manter"> Manter meus números</label>
+                <label><input type="checkbox" id="s-cnpj"> Migrar a titularidade de CPF para CNPJ</label>
+              </fieldset>
+            </div>
+            <p class="aviso aviso--erro" id="erro-simulador" role="alert" hidden></p>
+            <div class="acoes-passo"><button type="button" class="botao botao--primario" id="e-continuar">Continuar</button></div>
+          </div>
 
-        <form class="simulador" id="simulador" novalidate>
-          <div class="campo">
-            <label for="s-linhas">Quantidade de linhas</label>
-            <input id="s-linhas" type="number" min="1" max="500" value="1" inputmode="numeric" required>
+          <div class="passo" id="e-passo2" hidden>
+            <h2>O que você quer contratar?</h2>
+            <div class="campos">
+              <div class="campo">
+                <label for="s-plano">Plano de celular Claro</label>
+                <select id="s-plano"></select>
+              </div>
+              <div class="campo">
+                <label for="s-fibra">Internet fibra <span class="opcional">(opcional)</span></label>
+                <select id="s-fibra"><option value="">Não tenho interesse</option></select>
+              </div>
+              <fieldset class="campo campo--lista">
+                <legend>Comparar em</legend>
+                <label><input type="radio" name="periodo" value="12"> 12 meses</label>
+                <label><input type="radio" name="periodo" value="24" checked> 24 meses</label>
+              </fieldset>
+            </div>
+            <div class="acoes-passo">
+              <button type="button" class="botao botao--contorno" id="e-voltar">Voltar</button>
+              <button type="submit" class="botao botao--primario"><svg aria-hidden="true"><use href="#i-calc"/></svg>Calcular minha economia</button>
+            </div>
           </div>
-          <div class="campo">
-            <label for="s-valor">Quanto você paga hoje por mês (R$)</label>
-            <input id="s-valor" type="text" inputmode="decimal" placeholder="Ex.: 350,00" autocomplete="off" required>
-            <small>Some todas as linhas e, se for substituir, a internet.</small>
-          </div>
-          <div class="campo">
-            <label for="s-operadora">Operadora atual <span class="opcional">(opcional)</span></label>
-            <select id="s-operadora">
-              <option value="">Prefiro não informar</option>
-              <option>Vivo</option><option>TIM</option><option>Claro (CPF)</option><option>Oi</option><option>Outra</option>
-            </select>
-          </div>
-          <div class="campo">
-            <label for="s-plano">Plano Claro desejado</label>
-            <select id="s-plano"></select>
-          </div>
-          <div class="campo">
-            <label for="s-fibra">Internet fibra <span class="opcional">(opcional)</span></label>
-            <select id="s-fibra"><option value="">Não tenho interesse</option></select>
-          </div>
-          <fieldset class="campo campo--periodo">
-            <legend>Período de comparação</legend>
-            <label><input type="radio" name="periodo" value="12"> 12 meses</label>
-            <label><input type="radio" name="periodo" value="24" checked> 24 meses</label>
-          </fieldset>
-          <fieldset class="campo campo--interesses">
-            <legend>Tenho interesse em</legend>
-            <label><input type="checkbox" id="s-manter"> Manter meus números</label>
-            <label><input type="checkbox" id="s-cnpj"> Migrar a titularidade de CPF para CNPJ</label>
-          </fieldset>
-          <button class="botao botao--primario" type="submit"><svg aria-hidden="true"><use href="#i-calc"/></svg>Calcular minha economia</button>
         </form>
 
-        <p class="aviso aviso--erro" id="erro-simulador" role="alert" hidden></p>
-        <div class="resultado" id="resultado" aria-live="polite" hidden></div>
-
-        <div class="distincao">
-          <h3>Qual é o seu caso?</h3>
-          <dl>
-            <dt>Portabilidade</dt><dd>Você traz um número de outra operadora para a Claro e continua com ele.</dd>
-            <dt>CPF para CNPJ</dt><dd>A linha já é Claro e passa do seu CPF para o CNPJ da empresa, mantendo o número.</dd>
-            <dt>Nova contratação</dt><dd>Linha ou internet novas, no CNPJ da empresa.</dd>
-            <dt>Renovação ou mudança de plano</dt><dd>Quem já é cliente pode trocar de plano. Eu verifico se há condições melhores.</dd>
-          </dl>
-          <p class="nota">Toda operação passa por análise de elegibilidade e de crédito antes da confirmação.</p>
+        <div class="passo" id="e-passo3" hidden>
+          <div class="resultado" id="resultado" aria-live="polite"></div>
+          <div class="acoes-passo"><button type="button" class="botao botao--contorno" id="e-refazer">Fazer outra simulação</button></div>
+          <details class="mais">
+            <summary>Qual é o meu caso?</summary>
+            <dl class="distincao">
+              <dt>Portabilidade</dt><dd>Você traz um número de outra operadora para a Claro e continua com ele.</dd>
+              <dt>CPF para CNPJ</dt><dd>A linha já é Claro e passa do seu CPF para o CNPJ da empresa, mantendo o número.</dd>
+              <dt>Nova contratação</dt><dd>Linha ou internet novas, no CNPJ da empresa.</dd>
+              <dt>Renovação ou mudança de plano</dt><dd>Quem já é cliente pode trocar de plano. Eu verifico se há condições melhores.</dd>
+            </dl>
+            <p class="nota">Toda operação passa por análise de elegibilidade e de crédito antes da confirmação.</p>
+          </details>
+          <div class="analise">
+            <h2>Prefere enviar a fatura?</h2>
+            <p>Mande a foto da sua fatura pelo WhatsApp e eu comparo para você, sem custo e sem compromisso.</p>
+            <a class="botao botao--whats" data-whats="analise" href="https://wa.me/5542998242620?text=Ol%C3%A1%2C%20Evelyn%21%20Vim%20pelo%20site%20e%20quero%20falar%20sobre%20os%20planos%20Claro." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Enviar minha fatura</a>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="analise">
-          <h3>Prefere enviar a fatura?</h3>
-          <p>Mande a foto da sua fatura pelo WhatsApp e eu comparo para você, sem custo e sem compromisso.</p>
-          <a class="botao botao--whats" data-whats="analise" href="https://wa.me/5542998242620?text=Ol%C3%A1%2C%20Evelyn%21%20Vim%20pelo%20site%20e%20quero%20falar%20sobre%20os%20planos%20Claro." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Enviar minha fatura</a>
+    <!-- ================= COMPARAR ================= -->
+    <section class="vista" id="v-comparar" data-vista="comparar" aria-labelledby="t-comparar" hidden>
+      <div class="conteudo">
+        <header class="vista__topo">
+          <a class="voltar" href="#inicio">&larr; Início</a>
+          <h1 id="t-comparar" tabindex="-1">Comparar planos</h1>
+          <p class="intro">Em “Contratar”, toque em “Comparar” nos planos. Você pode comparar até 3 da mesma categoria.</p>
+        </header>
+        <p class="aviso aviso--atencao" id="aviso-comparar" role="status" hidden></p>
+        <div id="comparacao"></div>
+        <div class="acoes-passo"><a class="botao botao--contorno" href="#contratar">Escolher planos</a></div>
+      </div>
+    </section>
+
+    <!-- ================= BENEFÍCIOS ================= -->
+    <section class="vista" id="v-beneficios" data-vista="beneficios" aria-labelledby="t-beneficios" hidden>
+      <div class="conteudo">
+        <header class="vista__topo">
+          <a class="voltar" href="#inicio">&larr; Início</a>
+          <h1 id="t-beneficios" tabindex="-1">Benefícios da Claro Empresas</h1>
+          <p class="intro">Veja o que já vem incluído, o que é desconto de parceiro e o que é contratação adicional.</p>
+        </header>
+        <div class="abas" role="group" aria-label="Filtrar benefícios" id="abas-beneficios">
+          <button type="button" aria-pressed="true" data-cat="todos">Todos</button>
+          <button type="button" aria-pressed="false" data-cat="conectividade">Conectividade</button>
+          <button type="button" aria-pressed="false" data-cat="vantagens">Vantagens</button>
+          <button type="button" aria-pressed="false" data-cat="servicos">Serviços</button>
+          <button type="button" aria-pressed="false" data-cat="atendimento">Atendimento</button>
         </div>
-      </section>
-
-      <!-- ===== CENTRAL DE BENEFÍCIOS ===== -->
-      <section class="secao" id="beneficios" aria-labelledby="t-beneficios">
-        <p class="rotulo">Central de benefícios</p>
-        <h2 id="t-beneficios">O que vem com a Claro Empresas</h2>
-        <p class="intro">Veja o que já vem incluído, o que é desconto de parceiro e o que é contratação adicional.</p>
         <div class="legenda" aria-label="Legenda">
           <span class="etiqueta etiqueta--incluso">Incluso no plano</span>
           <span class="etiqueta etiqueta--desconto">Desconto de parceiro</span>
           <span class="etiqueta etiqueta--pago">Contratação adicional</span>
         </div>
-        <div class="abas" role="group" aria-label="Filtrar benefícios" id="abas-beneficios">
-          <button type="button" aria-pressed="true" data-cat="todos">Todos</button>
-          <button type="button" aria-pressed="false" data-cat="conectividade">Conectividade</button>
-          <button type="button" aria-pressed="false" data-cat="vantagens">Vantagens empresariais</button>
-          <button type="button" aria-pressed="false" data-cat="servicos">Serviços e produtividade</button>
-          <button type="button" aria-pressed="false" data-cat="atendimento">Atendimento</button>
-        </div>
         <div class="cartoes cartoes--pequenos" id="lista-beneficios"></div>
-        <p class="nota">Os benefícios variam conforme o plano. Os descontos de parceiros dependem da oferta vigente e podem mudar.</p>
-      </section>
+        <p class="nota">Os benefícios variam conforme o plano. Descontos de parceiros dependem da oferta vigente.</p>
+      </div>
+    </section>
 
-      <!-- ===== COBERTURA ===== -->
-      <section class="secao" id="cobertura" aria-labelledby="t-cobertura">
-        <p class="rotulo">Cobertura</p>
-        <h2 id="t-cobertura">A fibra chega à sua empresa?</h2>
-        <p class="intro">Informe o endereço e eu consulto a disponibilidade para você. O site não confirma cobertura sozinho.</p>
-        <form class="cobertura" id="cobertura-form" novalidate>
+    <!-- ================= COBERTURA ================= -->
+    <section class="vista" id="v-cobertura" data-vista="cobertura" aria-labelledby="t-cobertura" hidden>
+      <div class="conteudo conteudo--estreito">
+        <header class="vista__topo">
+          <a class="voltar" href="#inicio">&larr; Início</a>
+          <h1 id="t-cobertura" tabindex="-1">A fibra chega à sua empresa?</h1>
+          <p class="intro">Informe o endereço e eu consulto a disponibilidade para você. O site não confirma cobertura sozinho.</p>
+        </header>
+        <form class="campos" id="cobertura-form" novalidate>
           <div class="campo">
             <label for="c-cep">CEP</label>
             <input id="c-cep" type="text" inputmode="numeric" maxlength="9" placeholder="00000-000" autocomplete="postal-code" required>
@@ -316,18 +359,21 @@
             <label for="c-compl">Complemento <span class="opcional">(se tiver)</span></label>
             <input id="c-compl" type="text" maxlength="60" autocomplete="off">
           </div>
-          <button class="botao botao--whats" type="submit"><svg aria-hidden="true"><use href="#i-pin"/></svg>Consultar disponibilidade</button>
+          <p class="aviso aviso--erro" id="erro-cobertura" role="alert" hidden></p>
+          <div class="acoes-passo"><button class="botao botao--whats" type="submit"><svg aria-hidden="true"><use href="#i-pin"/></svg>Consultar disponibilidade</button></div>
         </form>
-        <p class="aviso aviso--erro" id="erro-cobertura" role="alert" hidden></p>
         <p class="nota">Ao consultar, o endereço é enviado só por WhatsApp, na conversa com o consultor. O site não guarda esses dados.</p>
-      </section>
+      </div>
+    </section>
 
-      <!-- ===== INSTALAR COMO APP ===== -->
-      <section class="secao" id="instalar" aria-labelledby="t-instalar">
-        <p class="rotulo">Instale no celular</p>
-        <h2 id="t-instalar">Seu atendimento empresarial na palma da mão.</h2>
-        <p class="intro">Adicione nosso site à tela inicial do seu celular e tenha acesso rápido aos planos, benefícios e atendimento sempre que precisar.</p>
-
+    <!-- ================= INSTALAR O APP ================= -->
+    <section class="vista" id="v-instalar" data-vista="instalar" aria-labelledby="t-instalar" hidden>
+      <div class="conteudo">
+        <header class="vista__topo">
+          <a class="voltar" href="#inicio">&larr; Início</a>
+          <h1 id="t-instalar" tabindex="-1">Seu atendimento empresarial na palma da mão.</h1>
+          <p class="intro">Adicione nosso site à tela inicial do seu celular e tenha acesso rápido aos planos, benefícios e atendimento sempre que precisar.</p>
+        </header>
         <div class="instalar">
           <div class="instalar__passos">
             <button class="botao botao--primario" id="btn-instalar" type="button" hidden><svg aria-hidden="true"><use href="#i-baixar"/></svg>Instalar no celular</button>
@@ -350,7 +396,6 @@
             </ol></div>
             <p class="nota">Este é o site comercial instalável do atendimento, não o aplicativo oficial da Claro. Funciona também sem instalar.</p>
           </div>
-
           <figure class="video">
             <video controls preload="none" playsinline poster="video/instalar-poster.jpg" aria-describedby="video-legenda">
               <source src="video/instalar-no-celular.mp4" type="video/mp4">
@@ -359,19 +404,16 @@
             <figcaption id="video-legenda">Tutorial de exemplo (57 s): mostra como adicionar à tela inicial no iPhone e no Android. O vídeo usa o app Minha Claro Empresas, da Claro, como exemplo. O procedimento para este site é o mesmo.</figcaption>
           </figure>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- ===== DEPOIMENTOS (só aparecem quando houver depoimentos autorizados) ===== -->
-      <section class="secao" id="depoimentos" aria-labelledby="t-depoimentos" hidden>
-        <p class="rotulo">Quem usa</p>
-        <h2 id="t-depoimentos">O que dizem os clientes</h2>
-        <div class="cartoes" id="lista-depoimentos"></div>
-      </section>
-
-      <!-- ===== PERGUNTAS FREQUENTES ===== -->
-      <section class="secao" id="duvidas" aria-labelledby="t-duvidas">
-        <p class="rotulo">Dúvidas</p>
-        <h2 id="t-duvidas">Perguntas frequentes</h2>
+    <!-- ================= DÚVIDAS ================= -->
+    <section class="vista" id="v-duvidas" data-vista="duvidas" aria-labelledby="t-duvidas" hidden>
+      <div class="conteudo conteudo--estreito">
+        <header class="vista__topo">
+          <a class="voltar" href="#inicio">&larr; Início</a>
+          <h1 id="t-duvidas" tabindex="-1">Perguntas frequentes</h1>
+        </header>
         <div class="perguntas">
           <details><summary>Vou perder meu número na portabilidade?</summary><p>Não. Na portabilidade você continua com o mesmo número, só muda a operadora para a Claro.</p></details>
           <details><summary>Qual a diferença entre portabilidade e transferência de CPF para CNPJ?</summary><p>Na portabilidade você traz o número de outra operadora para a Claro. Na transferência de titularidade a linha já é Claro e passa do seu CPF para o CNPJ da empresa, mantendo o número. Cada caso passa por análise de elegibilidade.</p></details>
@@ -384,34 +426,34 @@
           <details><summary>Como contrato?</summary><p>Escolha o plano e fale comigo pelo WhatsApp. Eu faço o cadastro, te passo os documentos necessários e acompanho até a linha ou a internet funcionar.</p></details>
           <details><summary>Como é o atendimento?</summary><p>Você é atendido diretamente por um consultor de Revenda Autorizada Claro pelo WhatsApp. Para internet fibra, a Claro também tem a central exclusiva de empresas, o 10621.</p></details>
         </div>
-      </section>
-    </div>
-
-    <section class="chamada" aria-labelledby="t-chamada">
-      <div class="conteudo">
-        <h2 id="t-chamada">Pronto para economizar?</h2>
-        <p>Fale comigo pelo WhatsApp e receba uma proposta personalizada.</p>
-        <a class="botao botao--branco" data-whats="geral" href="https://wa.me/5542998242620?text=Ol%C3%A1%2C%20Evelyn%21%20Vim%20pelo%20site%20e%20quero%20falar%20sobre%20os%20planos%20Claro." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Chamar no WhatsApp</a>
+        <div class="analise">
+          <h2>Ficou com alguma dúvida?</h2>
+          <p>Fale comigo pelo WhatsApp e receba uma proposta personalizada.</p>
+          <a class="botao botao--whats" data-whats="geral" href="https://wa.me/5542998242620?text=Ol%C3%A1%2C%20Evelyn%21%20Vim%20pelo%20site%20e%20quero%20falar%20sobre%20os%20planos%20Claro." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Chamar no WhatsApp</a>
+        </div>
       </div>
+    </section>
+
+    <!-- Depoimentos: só aparecem quando houver depoimentos reais e autorizados -->
+    <section class="vista vista--solta" id="depoimentos" aria-labelledby="t-depoimentos" hidden>
+      <div class="conteudo"><h2 id="t-depoimentos">O que dizem os clientes</h2><div class="cartoes" id="lista-depoimentos"></div></div>
     </section>
   </main>
 
   <footer class="rodape">
     <div class="conteudo">
-      <span class="rodape__selo"><img src="claro-revenda.png" alt="Claro Revenda Autorizada" width="130" height="27" loading="lazy"></span>
-      <p><strong>Evelyn Hartmann</strong> · Consultor(a) · Revenda Autorizada Claro</p>
-      <p>Planos e valores sujeitos a análise de elegibilidade, de crédito e à disponibilidade. Valores mensais por linha, em boleto, salvo indicação. Ofertas e preços podem mudar sem aviso.</p>
-      <p>Este é um site de atendimento de revenda autorizada e não é o site oficial da Claro.</p>
+      <span class="rodape__selo"><img src="claro-revenda.png" alt="Claro Revenda Autorizada" width="120" height="25" loading="lazy"></span>
+      <p><strong>Evelyn Hartmann</strong> · Revenda Autorizada Claro</p>
+      <p>Planos e valores sujeitos a análise de elegibilidade, de crédito e à disponibilidade. Valores mensais, em boleto, salvo indicação. Ofertas podem mudar sem aviso. Este é um site de atendimento de revenda autorizada e não é o site oficial da Claro.</p>
+      <p><a href="#instalar" data-vista-link="instalar">Instalar no celular</a></p>
       <p><a href="https://www.instagram.com/teraclaro/" target="_blank" rel="noopener">Instagram @teraclaro</a></p>
     </div>
   </footer>
 
-  <!-- Barra do WhatsApp para o celular -->
   <div class="barra" role="region" aria-label="Atendimento">
     <a class="botao botao--whats" data-whats="geral" href="https://wa.me/5542998242620?text=Ol%C3%A1%2C%20Evelyn%21%20Vim%20pelo%20site%20e%20quero%20falar%20sobre%20os%20planos%20Claro." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Falar com Evelyn no WhatsApp</a>
   </div>
 
-  <!-- Bandeja do comparador -->
   <div class="bandeja" id="bandeja" role="region" aria-label="Planos selecionados para comparar" hidden>
     <p><strong id="bandeja-n">0</strong> <span id="bandeja-txt">plano selecionado</span></p>
     <a class="botao botao--primario botao--pequeno" href="#comparar" id="bandeja-ver">Comparar</a>

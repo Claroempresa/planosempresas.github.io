@@ -20,7 +20,7 @@ export function podeAdicionar(selecionados, plano) {
 
 function textoPreco(p) {
   const v1 = precoNoMes(p, 1);
-  if (p.promocao) return `${brl(v1)} por ${p.promocao.meses} meses, depois ${brl(precoNoMes(p, p.promocao.meses + 1))}`;
+  if (p.promocao) return `${brl(v1)} por ${p.promocaoVariavel ? `até ${p.promocaoVariavel.maxMeses}` : p.promocao.meses} meses, depois ${brl(precoNoMes(p, p.promocao.meses + 1))}`;
   return v1 == null ? "Sob consulta" : brl(v1);
 }
 

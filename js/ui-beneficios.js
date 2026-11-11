@@ -16,11 +16,13 @@ export function iniciarBeneficios(estado) {
       return el("article", { classe: "beneficio" }, [
         el("div", { classe: "beneficio__topo" }, [
           el("span", { classe: "beneficio__icone" }, [icone(b.icone || "i-check")]),
-          el("div", {}, [el("h3", { texto: b.nome }), el("span", { classe: `etiqueta ${cls}`, texto: txt })]),
+          el("div", { classe: "beneficio__titulo" }, [el("h3", { texto: b.nome }), el("span", { classe: `etiqueta ${cls}`, texto: txt })]),
         ]),
         el("p", { texto: b.explicacao }),
-        el("p", { classe: "aplica" }, [el("strong", { texto: "Vale para: " }), b.aplicabilidade]),
-        el("p", { classe: "cond" }, [el("strong", { texto: "Condições: " }), b.condicoes]),
+        el("details", {}, [el("summary", { texto: "Para quem e condições" }), el("div", { classe: "detalhes" }, [
+          el("p", {}, [el("strong", { texto: "Vale para: " }), b.aplicabilidade]),
+          el("p", {}, [el("strong", { texto: "Condições: " }), b.condicoes]),
+        ])]),
       ]);
     }));
   }
@@ -39,5 +41,5 @@ export function iniciarDepoimentos(estado) {
     el("blockquote", { style: "margin:0", texto: `“${d.texto}”` }),
     el("figcaption", { classe: "cond", texto: [d.nome, d.empresa].filter(Boolean).join(" · ") }),
   ])));
-  $("#depoimentos").hidden = false;
+  estado.temDepoimentos = true;
 }
