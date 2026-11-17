@@ -99,7 +99,7 @@ def montar(modelo, c, ctx):
         "OG_DESCRICAO": html.escape(desc, quote=True), "CAPA": SITE + "capa.jpg", "VERSAO": ctx["versao"],
         "JSONLD": jsonld, "CONSULTOR_JSON": json.dumps(dados, ensure_ascii=False).replace("</", "<\\/"),
         "WA_GERAL": wa, "FOTO": c["foto"], "NOME": html.escape(nome), "PRIMEIRO_NOME": html.escape(primeiro),
-        "TRATAMENTO": "Sua consultora" if c["feminino"] else "Seu consultor", "WHATS_EXIBICAO": c["whatsappExibicao"],
+        "TRATAMENTO": c.get("tratamento") or ("Sua consultora" if c["feminino"] else "Seu consultor"), "WHATS_EXIBICAO": c["whatsappExibicao"],
         "INSTAGRAM_HTML": ig, "PLANOS_NOSCRIPT": noscript, "FAQ_HTML": faq,
     }
     saida = modelo

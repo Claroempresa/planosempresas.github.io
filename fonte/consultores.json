@@ -44,5 +44,15 @@
     "whatsapp": "554198809235",
     "whatsappExibicao": "(41) 9880-9235",
     "foto": "foto.jpg"
+  },
+  {
+    "pasta": "kimberlyn",
+    "nome": "Kimberlyn",
+    "primeiroNome": "Kimberlyn",
+    "feminino": true,
+    "tratamento": "Sua supervisora",
+    "whatsapp": "554198180940",
+    "whatsappExibicao": "(41) 9818-0940",
+    "foto": "foto.jpg"
   }
 ]
