@@ -100,6 +100,7 @@ def montar(modelo, c, ctx):
         "JSONLD": jsonld, "CONSULTOR_JSON": json.dumps(dados, ensure_ascii=False).replace("</", "<\\/"),
         "WA_GERAL": wa, "FOTO": c["foto"], "NOME": html.escape(nome), "PRIMEIRO_NOME": html.escape(primeiro),
         "TRATAMENTO": c.get("tratamento") or ("Sua consultora" if c["feminino"] else "Seu consultor"), "WHATS_EXIBICAO": c["whatsappExibicao"],
+        "COR_TEMA": ctx["tema"]["cor"], "TEMA_CLASSE": ctx["tema"]["classe"], "TEMA_CSS": ctx["tema"]["css"].replace("{{RAIZ}}", raiz).replace("{{VERSAO}}", ctx["versao"]), "FAIXA_BF": ctx["tema"]["faixa"],
         "INSTAGRAM_HTML": ig, "PLANOS_NOSCRIPT": noscript, "FAQ_HTML": faq,
     }
     saida = modelo
@@ -119,7 +120,15 @@ def main():
     fibra = [p["valorMensal"] for p in publicos if p["categoria"] == "fibra"]
     (RAIZ / "dados" / "planos.json").write_text(json.dumps(publicos, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
-    ctx = {"publicos": publicos, "faq": ler("dados/faq.json"), "min_movel": min(movel), "min_fibra": min(fibra), "versao": versao()}
+    tema = ler("fonte/tema.json")
+    if tema.get("blackFriday"):
+        faixa = html.escape(tema.get("faixa", "Black Friday"))
+        ctx_tema = {"cor": "#0A0A0B", "classe": ' class="tema-bf"',
+                    "css": '\n  <link rel="stylesheet" href="{{RAIZ}}css/black-friday.css?v={{VERSAO}}">',
+                    "faixa": f'<div class="faixa-bf" role="note">{faixa} <a href="#contratar">Ver ofertas</a></div>'}
+    else:
+        ctx_tema = {"cor": "#DA291C", "classe": "", "css": "", "faixa": ""}
+    ctx = {"tema": ctx_tema, "publicos": publicos, "faq": ler("dados/faq.json"), "min_movel": min(movel), "min_fibra": min(fibra), "versao": versao()}
     modelo = (RAIZ / "modelo" / "index.html").read_text(encoding="utf-8")
     consultores = ler("fonte/consultores.json")
 
