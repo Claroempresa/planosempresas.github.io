@@ -35,5 +35,24 @@
     "whatsapp": "554299476786",
     "whatsappExibicao": "(42) 9947-6786",
     "foto": "foto.jpg"
+  },
+  {
+    "pasta": "bianca",
+    "nome": "Bianca Naomi",
+    "primeiroNome": "Bianca",
+    "feminino": true,
+    "whatsapp": "554198809235",
+    "whatsappExibicao": "(41) 9880-9235",
+    "foto": "foto.jpg"
+  },
+  {
+    "pasta": "kimberlyn",
+    "nome": "Kimberlyn",
+    "primeiroNome": "Kimberlyn",
+    "feminino": true,
+    "tratamento": "Sua supervisora",
+    "whatsapp": "554198180940",
+    "whatsappExibicao": "(41) 9818-0940",
+    "foto": "foto.jpg"
   }
 ]
